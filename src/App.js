@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './fgAppIcon.svg';
 import './App.css';
 
 function App() {
@@ -6,16 +6,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h2>formgroup.io</h2>
+        <p>Plattform for innovative solutions.</p>
+        <p>This site is under constructions.</p>
+
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:info@formgorup.io"
         >
-          Learn React
+          Contact
         </a>
       </header>
     </div>
