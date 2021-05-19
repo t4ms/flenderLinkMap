@@ -3,12 +3,17 @@
 }
 
 .App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+.App-icon {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App-icon {
     animation: App-logo-spin infinite 20s linear;
   }
 }
