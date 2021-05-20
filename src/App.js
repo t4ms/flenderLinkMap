@@ -10,11 +10,11 @@ function App() {
         <h2>Welcome to </h2><img src={logo} className="App-logo" alt="formgroup Logo"></img>
         <br></br>
         <p>Plattform for innovative solutions.</p>
-        <p>This site is under constructions.</p>
+        <p>This site is under construction.</p>
         <br></br>
         <a
           className="App-link"
-          href="mailto:info@formgorup.io"
+          href="mailto:info@formgroup.io"
         >
           Contact
         </a>
