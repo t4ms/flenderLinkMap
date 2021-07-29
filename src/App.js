@@ -1,28 +1,30 @@
-import icon from './image/svg/fgAppIcon.svg';
-import logo from './image/svg/formgroupLogo.svg'
+// App.js
+ 
+import React, { Component } from 'react';
 import './App.css';
+import home from './components/Home';
+import team from './components/Team';
+import portfolio from './components/Portfolio';
+import about from './components/About';
+import contact from './components/Contact';
+import Maintenance from './components/Maintenance';
+import { Switch, Route } from 'react-router-dom';
+ 
+class App extends Component {
+  render() {
+    return (
+  
+       <Switch>
+          <Route exact path='/' component={Maintenance}/>
+          <Route exact path='/home' component={home}/>
+          <Route exact path='/team' component={team}/>
+          <Route exact path='/portfolio' component={portfolio}/>
+          <Route exact path='/contact' component={contact}/>
+          <Route path='/about' component={about}/>
+        </Switch>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={icon} className="App-icon" alt="formgroup Icon" />
-        <h2>Welcome to </h2><img src={logo} className="App-logo" alt="formgroup Logo"></img>
-        <br></br>
-        <p>Plattform for innovative solutions.</p>
-        <p>This site is under construction.</p>
-        <br></br>
-        <a
-          className="App-link"
-          href="mailto:info@formgroup.io"
-        >
-          Contact
-        </a>
-        <br></br>
-        
-      </header>
-    </div>
-  );
+    );
+  }
 }
-
+ 
 export default App;

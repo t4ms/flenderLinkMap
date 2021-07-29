@@ -1,3 +1,14 @@
+/* ./src/index.css */
+
+.helloThere {
+  color: blue;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
 body {
   margin: 0;
   font-family: -apple-system, 'Open Sans',
@@ -6,12 +17,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: 'Open Sans',
-  sans-serif;
 }
 
-h1 {
-  font-weight: 600;
-  font-size: 36px;
-}
