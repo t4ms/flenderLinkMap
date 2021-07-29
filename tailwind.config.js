@@ -15,7 +15,7 @@ module.exports = {
       },
       colors:{
         'fgDefault':{
-          black:'#030c01',
+          black:'#070C08',
           lighter: '#a7d4b5',
           light: '#6bbaa6',
           medium: '#417886',
@@ -28,6 +28,7 @@ module.exports = {
           400: '#479435',
           600: '#3c8032',
           800: '#0a2805',
+          1000: '#030C01',
         }
       }
       
