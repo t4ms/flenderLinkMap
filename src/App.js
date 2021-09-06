@@ -2,12 +2,12 @@
  
 import React, { Component } from 'react';
 import './App.css';
-import home from './components/home';
-import team from './components/team';
-import portfolio from './components/portfolio';
-import about from './components/about';
-import contact from './components/contact';
-import maintenance from './components/maintenance';
+import home from '../src/components/home';
+import team from '../src/components/team';
+import portfolio from '../src/components/portfolio';
+import about from '../src/components/about';
+import contact from '../src/components/contact';
+import maintenance from '../src/components/maintenance';
 import { Switch, Route } from 'react-router-dom';
  
 class App extends Component {
