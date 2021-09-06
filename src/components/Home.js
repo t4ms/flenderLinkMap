@@ -1,7 +1,7 @@
 // components/Home.js
  
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from './navbar';
 
 import imgValentia from '../image/png/img_valentia-intro.png'
 
