@@ -7,7 +7,7 @@ import team from './components/team';
 import portfolio from './components/portfolio';
 import about from './components/about';
 import contact from './components/contact';
-import maintenance from './components/maintenance';
+// import maintenance from './components/maintenance';
 import { Switch, Route } from 'react-router-dom';
  
 class App extends Component {
