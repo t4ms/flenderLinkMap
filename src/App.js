@@ -7,7 +7,7 @@ import team from './components/team';
 import portfolio from './components/portfolio';
 import about from './components/about';
 import contact from './components/contact';
-// import maintenance from './components/maintenance';
+import maintenance from './components/maintenance';
 import { Switch, Route } from 'react-router-dom';
  
 class App extends Component {
@@ -15,9 +15,9 @@ class App extends Component {
     return (
   
        <Switch>
-          <Route exact path='/' component={home}/>
-          <Route exact path='/home' component={home}/>
-          <Route exact path='/team' component={team}/>
+          <Route path='/' component={maintenance}/>
+          <Route path='/home' component={home}/>
+          <Route path='/team' component={team}/>
           <Route exact path='/portfolio' component={portfolio}/>
           <Route exact path='/contact' component={contact}/>
           <Route exact path='/about' component={about}/>
