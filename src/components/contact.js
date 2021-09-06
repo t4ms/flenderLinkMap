@@ -1,16 +1,16 @@
-// components/Portfolio.js
+// components/Contact.js
  
 import React from 'react';
 import Navbar from './navbar';
  
-const portfolio = () => {
+const contact = () => {
   return (
 
 <div>
 <Navbar></Navbar>
 
 <div>
-  <h1>Hello Portfolio</h1>
+  <h1>Contact</h1>
 </div>
 
 
@@ -20,4 +20,4 @@ const portfolio = () => {
   )
 }
  
-export default portfolio;
+export default contact;
