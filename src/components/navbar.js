@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 
-import icon from '../image/svg/fgAppIcon.svg';
 import logo from '../image/svg/formgroupLogo.svg'
 
 import { Popover, Transition } from '@headlessui/react'
@@ -90,7 +89,7 @@ export default function Example() {
           
           {/* Nav 1 - Warum formgroup */}
 
-          <a href="#" className="text-base font-medium text-white hover:text-fgDefault-lighter">
+          <a href="/" className="text-base font-medium text-white hover:text-fgDefault-lighter">
               Warum formgroup?
             </a>
 
@@ -151,7 +150,7 @@ export default function Example() {
                           ))}
                         </div>
                         <div className="p-5 bg-gray-50 sm:p-8">
-                          <a href="#" className="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
+                          <a href="/" className="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
                             <div className="flex items-center">
                               <div className="text-base font-medium text-gray-900">Enterprise</div>
                               <span className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800">
@@ -173,11 +172,11 @@ export default function Example() {
 
           </Popover.Group>
           <div className="flex items-center md:ml-12">
-            <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
               Sign in
             </a>
             <a
-              href="#"
+              href="/"
               className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
             >
               Sign up
@@ -232,15 +231,15 @@ export default function Example() {
             </div>
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Team
                 </a>
 
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Warum formgroup?
                 </a>
 
-                <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Enterprise
                 </a>
                 {resources.map((item) => (
@@ -255,14 +254,14 @@ export default function Example() {
               </div>
               <div className="mt-6">
                 <a
-                  href="#"
+                  href="/"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Sign up
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                  <a href="/" className="text-indigo-600 hover:text-indigo-500">
                     Sign in
                   </a>
                 </p>

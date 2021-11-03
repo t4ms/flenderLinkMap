@@ -4,8 +4,6 @@ import React from 'react';
 
 import Navbar from './navbar';
 
-import imgHugo from '../image/jpg/formgroup-hugoschweers.jpg'
-
 const people = [
   {
     name: 'Hugo Schweers',
@@ -40,7 +38,7 @@ export default function team() {
               neque.
             </p>
           </div>
-          <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
+          <ul className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
             {people.map((person) => (
               <li key={person.name} className="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
                 <div className="space-y-6 xl:space-y-10">
@@ -51,8 +49,7 @@ export default function team() {
                       <p className="text-indigo-400">{person.role}</p>
                     </div>
 
-                    <ul role="list" className="flex justify-center space-x-5">
-                      <li>
+                  <li>
                         <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-300">
                           <span className="sr-only">Twitter</span>
                           <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -72,7 +69,6 @@ export default function team() {
                           </svg>
                         </a>
                       </li>
-                    </ul>
                   </div>
                 </div>
               </li>

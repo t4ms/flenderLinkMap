@@ -4,9 +4,6 @@ import React from 'react';
 
 import Navbar from './navbar';
 
-import imgValentia from '../image/png/img_valentia-intro.png'
-
-import FgHomeAnimation from './animation/fgHomeAnimation'
 import FgAnimationText from './animation/fgAnimationText'
 
 import FormgroupAnimation from '../image/png/Animation_Platzhalter.png'
