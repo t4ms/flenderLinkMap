@@ -3,6 +3,7 @@
 import React from 'react';
 
 import Navbar from './navbar';
+import Footer from './footer';
 
 import FgAnimationText from './animation/fgAnimationText'
 
@@ -55,7 +56,7 @@ const maintenance = () => {
   return (
 
 
-<div className="mb-72">
+<div>
 
 <Navbar />
 
@@ -167,7 +168,7 @@ const maintenance = () => {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 mb-48">
           <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             {features.map((feature) => (
               <div key={feature.name} className="relative">
@@ -184,7 +185,11 @@ const maintenance = () => {
         </div>
       </div>
     </div>
+
+    <Footer />
+
 </div>
+
 
 
 
