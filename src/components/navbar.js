@@ -1,54 +1,56 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 
-import logo from '../image/svg/formgroupLogo.svg'
+import formgroupLogoWhite from '../image/svg/formgroupLogoWhite.svg'
+import formgroupLogoBlack from '../image/svg/formgroupLogoBlack.svg'
+import langDe from '../image/svg/lang_de.svg'
+import langEn from '../image/svg/lang_en.svg'
 
-import { Popover, Transition } from '@headlessui/react'
+import iconValentia from '../image/svg/ICON_fg_valentia.svg'
+import iconCrozier from '../image/svg/ICON_fg_crozier.svg'
+import iconBoltXl from '../image/svg/ICON_fg_boltXl.svg'
+import iconHurler from '../image/svg/ICON_fg_hurler.svg'
+
+import { Popover, Menu, Transition } from '@headlessui/react'
 import {
-  ChartBarIcon,
-  CursorClickIcon,
-  DocumentReportIcon,
+  BellIcon,
   MenuIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-const solutions = [
+const popUpNav = [
   {
-    name: 'Analytics',
-    description: 'Get a better understanding of where your traffic is coming from.',
+    name: 'Valentia',
+    mol: '(Fluroxypyr 100 g/l, Florasulam 2 g/l)',
+    description: 'Einzigartig in Mais – Top in Getreide',
     href: '#',
-    icon: ChartBarIcon,
+    icon: iconValentia,
   },
   {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
+    name: 'Crozier',
+    description: 'Das Basisherbizid inKartoffeln und der Resistenzbrecher im Getreide',
+    mol: '(Prosulfocarb 800g/l)',
     href: '#',
-    icon: CursorClickIcon,
-  },
-  { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: ViewGridIcon,
+    icon: iconCrozier,
   },
   {
-    name: 'Automations',
-    description: 'Build strategic funnels that will drive your customers to convert',
+    name: 'BOLT XL',
+    description: "Das Top Azol für Getreide und Raps",
+    mol: '(Prothioconazol 250 g/l))',
     href: '#',
-    icon: RefreshIcon,
+    icon: iconBoltXl,
   },
   {
-    name: 'Reports',
-    description: 'Get detailed reports that will help you make more informed decisions ',
+    name: 'Hurler',
+    description: 'Bewährt in Getreide und Grünland',
+    mol: '(Fluroxypyr 180 g/l)',
     href: '#',
-    icon: DocumentReportIcon,
+    icon: iconHurler,
   },
 ]
+
+
 const resources = [
   {
     name: 'Help Center',
@@ -64,22 +66,22 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navbar(props) {
   return (
-    <Popover className="relative bg-fgDefault-black">
+    <Popover className="relative bg-transparent">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <a href="/" className="flex">
             <span className="sr-only">formgroup</span>
             <img
-              className="h-8 w-auto sm:h-10"
-              src={logo}
+              className="pb-2 h-8 w-auto sm:h-10"
+              src={formgroupLogoWhite}
               alt="formgroups"
             />
           </a>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
-          <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-fgDefault-light">
             <span className="sr-only">Open menu</span>
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
@@ -89,13 +91,13 @@ export default function Example() {
           
           {/* Nav 1 - Warum formgroup */}
 
-          <a href="/" className="text-base font-medium text-white hover:text-fgDefault-lighter">
+          <a href="/" className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white">
               Warum formgroup?
             </a>
 
             {/* Nav 2 - Team */}
 
-            <a href="/team" className="text-base font-medium text-white hover:text-fgDefault-lighter">
+            <a href="/team" className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white">
               Team
             </a>
             
@@ -106,8 +108,8 @@ export default function Example() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? 'text-fgDefault-light' : 'text-white',
-                      'group rounded-md inline-flex items-center text-base font-medium hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      open ? 'text-white' : 'text-white',
+                      'pb-2 group inline-flex items-center text-base font-medium border-transparent border-b hover:border-white focus:border-white'
                     )}
                   >
                     <span>Lösungen & Produkte</span>
@@ -133,17 +135,18 @@ export default function Example() {
                     <Popover.Panel className="absolute z-10 -ml-72 mt-3 transform w-screen max-w-md lg:max-w-3xl">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                          {solutions.map((item) => (
+                          {popUpNav.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100"
                             >
-                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
-                                <item.icon className="h-6 w-6" aria-hidden="true" />
+                              <div className="flex-shrink-0 flex items-center justify-center h-36 w-36 text-white sm:h-24 sm:w-24">
+                              <img className="pb-2 h-24 w-auto sm:h-36" src={item.icon} alt={item.name} />
                               </div>
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                <p className="text-sm font-light italic text-fgDefault-darker">{item.mol}</p>
                                 <p className="mt-1 text-sm text-gray-500">{item.description}</p>
                               </div>
                             </a>
@@ -171,17 +174,59 @@ export default function Example() {
 
 
           </Popover.Group>
-          <div className="flex items-center md:ml-12">
-            <a href="/" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Sign in
-            </a>
-            <a
-              href="/"
-              className="ml-8 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-            >
-              Sign up
-            </a>
-          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button
+                  type="button"
+                  className="bg-fgDefault-darker p-1 rounded-full text-fgDefault-dark hover:text-white"
+                >
+                  <span className="sr-only">View notifications</span>
+                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+
+                {/* Language dropdown */}
+                <Menu as="div" className="ml-3 relative">
+                  <div>
+                    <Menu.Button className="bg-fgDefault-darker flex text-sm rounded-full">
+                      <span className="sr-only">Choose Language</span>
+                      
+                      {props.lang==="de" ? <img className="h-8 w-8 rounded-full" src={langDe} alt="Deutsch"/> : <img className="h-8 w-8 rounded-full" src={langEn} alt="English"/> }
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            German
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            English
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              </div>
         </div>
       </div>
 
@@ -201,12 +246,12 @@ export default function Example() {
                 <div>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                    src={formgroupLogoBlack}
                     alt="Workflow"
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-dgDefault-light">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -214,16 +259,17 @@ export default function Example() {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-6">
-                  {solutions.map((item) => (
+                  {popUpNav.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-100"
                     >
-                      <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                        <item.icon className="h-6 w-6" aria-hidden="true" />
+                      <div className="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-md text-white">
+                      <img className="pb-2 h-24 w-auto" src={item.icon} alt={item.name} />
                       </div>
-                      <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
+                      <span className="ml-4 text-base font-medium text-gray-900">{item.name}</span>
+                      <span className="ml-4 text-base italic text-fgDefault-darker">{item.mol}</span>
                     </a>
                   ))}
                 </nav>
@@ -232,11 +278,11 @@ export default function Example() {
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Team
+                Warum formgroup?
                 </a>
 
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Warum formgroup?
+                  Team
                 </a>
 
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
@@ -252,20 +298,30 @@ export default function Example() {
                   </a>
                 ))}
               </div>
-              <div className="mt-6">
-                <a
-                  href="/"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{' '}
-                  <a href="/" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
-              </div>
+              <div className="mt-12 xl:mt-0">
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Sprache</h3>
+            <form className="mt-4 sm:max-w-xs">
+              <fieldset className="w-full">
+                <label htmlFor="language" className="sr-only">
+                  Language
+                </label>
+                <div className="relative">
+                  <select
+                    id="language"
+                    name="language"
+                    className="appearance-none block w-full bg-none border rounded-md py-2 pl-3 pr-10 text-base text-fgDefault-dark focus:outline-none focus:ring-fgDefault-dark focus:border-fgDefault-dark sm:text-sm"
+                    defaultValue="English"
+                  >
+                    <option>English</option>
+                    <option>German</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
+                    <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
             </div>
           </div>
         </Popover.Panel>

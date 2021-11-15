@@ -2,7 +2,7 @@
  
 import React from 'react';
 import icon from '../image/svg/fgAppIcon.svg';
-import logo from '../image/svg/formgroupLogo.svg';
+import logo from '../image/svg/formgroupLogoWhite.svg';
 
 
 
