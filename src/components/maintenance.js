@@ -58,7 +58,7 @@ const maintenance = () => {
 
 <div>
 
-<Navbar lang="en"/>
+<Navbar lang="de"/>
 
 <div className="-mt-24 bg-gradient-to-br from-fgDefault-black via-fgDefault-black to-fgDefault-darker ... overflow-hidden " >
       <div className="max-w-7xl h-10xl mx-auto">
