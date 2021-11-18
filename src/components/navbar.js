@@ -23,7 +23,8 @@ const popUpNav = [
   {
     name: 'Valentia',
     mol: '(Fluroxypyr 100 g/l, Florasulam 2 g/l)',
-    description: 'Einzigartig in Mais – Top in Getreide',
+    descriptionDe: 'Einzigartig in Mais – Top in Getreide',
+    descriptionEn: 'Unique in corn - top in cereals',
     href: '#',
     icon: iconValentia,
   },
@@ -50,17 +51,6 @@ const popUpNav = [
   },
 ]
 
-
-const resources = [
-  {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-  },
-  { name: 'Guides', description: 'Learn how to maximize our platform to get the most out of it.', href: '#' },
-  { name: 'Events', description: 'See what meet-ups and other events we might be planning near you.', href: '#' },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#' },
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -92,7 +82,7 @@ export default function Navbar(props) {
           {/* Nav 1 - Warum formgroup */}
 
           <a href="/" className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white">
-              Warum formgroup?
+          {props.lang==="de" ? 'Warum formgroup?' : 'Why formgroup?'}
             </a>
 
             {/* Nav 2 - Team */}
@@ -112,7 +102,7 @@ export default function Navbar(props) {
                       'pb-2 group inline-flex items-center text-base font-medium border-transparent border-b hover:border-white focus:border-white'
                     )}
                   >
-                    <span>Lösungen & Produkte</span>
+                    <span>{props.lang==="de" ? 'Produkte & Lösungen' : 'Products & Solutions'}</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -147,7 +137,7 @@ export default function Navbar(props) {
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                                 <p className="text-sm font-light italic text-fgDefault-darker">{item.mol}</p>
-                                <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                <p className="mt-1 text-sm text-gray-500">{props.lang==="de" ? item.descriptionDe : item.descriptionEn}</p>
                               </div>
                             </a>
                           ))}
@@ -208,7 +198,7 @@ export default function Navbar(props) {
                             href="/"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            German
+                           <img className="h-8 w-8 rounded-full inline" src={langDe} alt="Deutsch"/> German
                           </a>
                         )}
                       </Menu.Item>
@@ -219,7 +209,7 @@ export default function Navbar(props) {
                             href="/"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            English
+                            <img className="h-8 w-8 rounded-full inline" src={langEn} alt="English"/>English
                           </a>
                         )}
                       </Menu.Item>
@@ -286,18 +276,12 @@ export default function Navbar(props) {
                 </a>
 
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Enterprise
+                  Leistungen
                 </a>
-                {resources.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
+                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                  Kontakt
+                </a>
+                </div>
               <div className="mt-12 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Sprache</h3>
             <form className="mt-4 sm:max-w-xs">
