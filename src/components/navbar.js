@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 
 import formgroupLogoWhite from '../image/svg/formgroupLogoWhite.svg'
 import formgroupLogoBlack from '../image/svg/formgroupLogoBlack.svg'
@@ -25,7 +25,7 @@ const popUpNav = [
     mol: '(Fluroxypyr 100 g/l, Florasulam 2 g/l)',
     descriptionDe: 'Einzigartig in Mais – Top in Getreide',
     descriptionEn: 'Unique in corn - top in cereals',
-    href: '#',
+    href: './products/valentia',
     icon: iconValentia,
   },
   {
@@ -56,9 +56,16 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar(props) {
-  return (
-    <Popover className="relative bg-transparent">
+class Navbar extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  render (){
+    return (
+    <Popover className="relative bg-transparent z-40">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
           <a href="/" className="flex">
@@ -82,7 +89,7 @@ export default function Navbar(props) {
           {/* Nav 1 - Warum formgroup */}
 
           <a href="/" className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white">
-          {props.lang==="de" ? 'Warum formgroup?' : 'Why formgroup?'}
+          {this.props.lang==="de" ? 'Warum formgroup?' : 'Why formgroup?'}
             </a>
 
             {/* Nav 2 - Team */}
@@ -102,7 +109,7 @@ export default function Navbar(props) {
                       'pb-2 group inline-flex items-center text-base font-medium border-transparent border-b hover:border-white focus:border-white'
                     )}
                   >
-                    <span>{props.lang==="de" ? 'Produkte & Lösungen' : 'Products & Solutions'}</span>
+                    <span>{this.props.lang==="de" ? 'Produkte & Lösungen' : 'Products & Solutions'}</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -137,21 +144,21 @@ export default function Navbar(props) {
                               <div className="ml-4">
                                 <p className="text-base font-medium text-gray-900">{item.name}</p>
                                 <p className="text-sm font-light italic text-fgDefault-darker">{item.mol}</p>
-                                <p className="mt-1 text-sm text-gray-500">{props.lang==="de" ? item.descriptionDe : item.descriptionEn}</p>
+                                <p className="mt-1 text-sm text-gray-500">{this.state.lang==="de" ? item.descriptionDe : item.descriptionEn}</p>
                               </div>
                             </a>
                           ))}
                         </div>
-                        <div className="p-5 bg-gray-50 sm:p-8">
-                          <a href="/" className="-m-3 p-3 flow-root rounded-md hover:bg-gray-100">
+                        <div className="p-5 bg-fgDefault-dark hover:bg-fgDefault-darker sm:p-8">
+                          <a href="/" className="-m-3 p-3 flow-root rounded-md">
                             <div className="flex items-center">
-                              <div className="text-base font-medium text-gray-900">Enterprise</div>
-                              <span className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-indigo-100 text-indigo-800">
-                                New
+                              <div className="text-base font-medium text-white">formgroup</div>
+                              <span className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-white text-fgDefault-medium">
+                              {this.props.lang==="de" ? 'LEISTUNGEN' : 'SERVICES'}
                               </span>
                             </div>
-                            <p className="mt-1 text-sm text-gray-500">
-                              Empower your entire team with even more advanced tools.
+                            <p className="mt-1 text-sm text-white">
+                            {this.props.lang==="de" ? 'Beispieltext' : 'Empower your entire team with even more advanced tools.'}
                             </p>
                           </a>
                         </div>
@@ -179,7 +186,7 @@ export default function Navbar(props) {
                     <Menu.Button className="bg-fgDefault-darker flex text-sm rounded-full">
                       <span className="sr-only">Choose Language</span>
                       
-                      {props.lang==="de" ? <img className="h-8 w-8 rounded-full" src={langDe} alt="Deutsch"/> : <img className="h-8 w-8 rounded-full" src={langEn} alt="English"/> }
+                      {this.props.lang==="de" ? <img className="h-8 w-8 rounded-full" src={langDe} alt="Deutsch"/> : <img className="h-8 w-8 rounded-full" src={langEn} alt="English"/> }
                     </Menu.Button>
                   </div>
                   <Transition
@@ -194,23 +201,23 @@ export default function Navbar(props) {
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="/"
+                          <button
+                            onClick = {(e) => this.props.handleLangHome('de')}
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                            <img className="h-8 w-8 rounded-full inline" src={langDe} alt="Deutsch"/> German
-                          </a>
+                          </button>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           
-                          <a
-                            href="/"
+                          <button
+                            onClick = {(e) => this.props.handleLangHome('en')}
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             <img className="h-8 w-8 rounded-full inline" src={langEn} alt="English"/>English
-                          </a>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>
@@ -268,7 +275,7 @@ export default function Navbar(props) {
             <div className="py-6 px-5">
               <div className="grid grid-cols-2 gap-4">
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                Warum formgroup?
+                {this.props.lang==="de" ? "Warum formgroup?" : "Why formgroup?"}
                 </a>
 
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
@@ -276,40 +283,43 @@ export default function Navbar(props) {
                 </a>
 
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Leistungen
+                {this.props.lang==="de" ? "Leistungen" : "Services"}
                 </a>
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Kontakt
+                {this.props.lang==="de" ? "Kontakt" : "Contact"}
                 </a>
                 </div>
               <div className="mt-12 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Sprache</h3>
-            <form className="mt-4 sm:max-w-xs">
-              <fieldset className="w-full">
-                <label htmlFor="language" className="sr-only">
-                  Language
-                </label>
-                <div className="relative">
-                  <select
-                    id="language"
-                    name="language"
-                    className="appearance-none block w-full bg-none border rounded-md py-2 pl-3 pr-10 text-base text-fgDefault-dark focus:outline-none focus:ring-fgDefault-dark focus:border-fgDefault-dark sm:text-sm"
-                    defaultValue="English"
-                  >
-                    <option>English</option>
-                    <option>German</option>
-                  </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
-                    <ChevronDownIcon className="h-4 w-4 text-white" aria-hidden="true" />
+            {/* Language dropdown */}
+                      <div className="grid grid-cols-2">
+                      <div className="">
+                          <button
+                            onClick = {(e) => this.props.handleLangHome('de')}
+                            className='bg-white rounded-md px-16 py-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fgDefault-medium'
+                          >
+                           <img className="h-8 w-8 rounded-full inline" src={langDe} alt="Deutsch"/> German
+                          </button>
                   </div>
-                </div>
-              </fieldset>
-            </form>
+                  <div>
+
+                          
+                          <button
+                            onClick = {(e) => this.props.handleLangHome('en')}
+                            className='bg-white rounded-md px-16 py-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fgDefault-medium'
+                          >
+                            <img className="h-8 w-8 rounded-full inline" src={langEn} alt="English"/>English
+                          </button>
+                          </div>
+                          </div>
+
           </div>
             </div>
           </div>
         </Popover.Panel>
       </Transition>
     </Popover>
-  )
+  )}
 }
+
+export default Navbar;

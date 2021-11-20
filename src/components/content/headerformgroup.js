@@ -4,7 +4,7 @@ import FgAnimationText from '../animation/fgAnimationText'
 
 import FormgroupAnimation from '../../image/png/Animation_Platzhalter.png'
 
-export default function headerformgroup() {
+export default function headerformgroup(props) {
     return (
         <div className="-mt-24 bg-gradient-to-br from-fgDefault-black via-fgDefault-black to-fgDefault-darker ... overflow-hidden " >
         <div className="max-w-7xl h-10xl mx-auto">
@@ -24,10 +24,11 @@ export default function headerformgroup() {
               <div className="sm:text-center lg:text-left inline">
                 <h1 className="text-5xl tracking-tight text-white sm:text-4xl md:text-5xl">
   
-                  <FgAnimationText />
+                  <FgAnimationText lang={props.lang}/>
                 </h1>
                 <p className="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Team erfahrener und vernetzter Experten unterstützt Produzenten und Händler konzeptionell und operativ in allen Fragen rund um ihre Geschäfts-Strategie und Go-to-market Implementierung.
+                {props.lang==="de" ? 'Team erfahrener und vernetzter Experten unterstützt Produzenten und Händler konzeptionell und operativ in allen Fragen rund um ihre Geschäfts-Strategie und Go-to-market Implementierung.' : 'Team of experienced and networked experts supports producers and retailers conceptually and operationally in all questions relating to their business strategy and go-to-market implementation.'}
+                
                 </p>
                 {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
@@ -52,8 +53,6 @@ export default function headerformgroup() {
           </div>
         </div>
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:flex lg:flex-wrap lg:content-center sm:content-center">
-            
-        
             {/* <FgHomeAnimation /> */}
           <img
             className="w-full h-96 object-scale-down"

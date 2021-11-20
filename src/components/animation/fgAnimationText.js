@@ -2,16 +2,17 @@ import React from 'react'
 
 import './fgAnimationText.css';
 
-export default function fgAnimationText() {
+export default function fgAnimationText(props) {
     return (
         <div>
         <span className="containerAnimation">
-  Mit uns wachsen
+        {props.lang==="de" ? 'Mit uns wachsen' : ''}
   <div className="flip">
-    <div><div>Produkte</div></div>
-    <div><div>Innovationen</div></div>
-    <div><div>Lösungen</div></div>
+    <div><div>{props.lang==="de" ? 'Produkt' : 'Product'}</div></div>
+    <div><div>{props.lang==="de" ? 'Innovtationen' : 'Innovations'}</div></div>
+    <div><div>{props.lang==="de" ? 'Lösungen' : 'Solution'}</div></div>
   </div>
+        {props.lang==="de" ? '' : 'grow with us.'}
 </span>
             
         </div>
