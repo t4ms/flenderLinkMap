@@ -22,13 +22,25 @@ module.exports = {
           dark: '#374151',
           darker: '#1F2937',         
         },
-        'fgValentia':{
-          DEFAULT: '#0d1c03',
-          200: '#62ac2f',
-          400: '#479435',
-          600: '#3c8032',
-          800: '#0a2805',
-          1000: '#030C01',
+        'green':{
+          black: '#070C08',
+          darker: '#131C13',
+          dark: '#162718',
+          medium: '#357300',
+          light: '#479900',
+          lighter: '#59BF00',
+        },
+        'brown':{
+          black: '#070707',
+          darker: '#402517',
+          dark: '#4D2B1C',
+          medium: '#663925',
+          light: '#945437',
+        },
+        'yellow':{
+          medium: '#DAA201',
+          light: '#F3AD16',
+          lighter: '#FFEC00',
         },
         borderWidth: {
           DEFAULT: '1px',
