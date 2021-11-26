@@ -393,7 +393,7 @@ class Navbar extends React.Component {
                           className="h-8 w-8 rounded-full inline"
                           src={langEn}
                           alt="English"
-                        />
+                        />{" "}
                         English
                       </button>
                     </div>
