@@ -5,6 +5,7 @@ import { DocumentDownloadIcon } from "@heroicons/react/solid";
 import { CheckIcon, ThumbUpIcon, UserIcon } from "@heroicons/react/solid";
 
 import ValentiaIntro from "../../image/svg/Valentia_Intro.svg";
+import ValentiaIntroImg from "../../image/png/img_valentia-intro.png";
 import ValentiaCorn from "../../image/png/valentia_corn.png";
 import iconCorn from "../../image/svg/ICON_fg_corn.svg";
 import Greencircle1 from "../../image/svg/green_circle_1.svg";
@@ -129,98 +130,86 @@ const corntable = [
     nameEn: "Kamille",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Klettenlabkraut",
     nameEn: "Klettenlabkraut",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Vogelmiere",
     nameEn: "Vogelmiere",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Ackerwinde*",
     nameEn: "Ackerwinde*",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Austfallraps",
     nameEn: "Austfallraps",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Knöterich-Arten*",
     nameEn: "Knöterich-Arten*",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Amarant",
     nameEn: "Amarant",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Franzosenkraut",
     nameEn: "Franzosenkraut",
     circle1: Greencircle1,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Gänsefuß",
     nameEn: "Gänsefuß",
     circle1: Greencircle14,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Ehrenpreis",
     nameEn: "Ehrenpreis",
     circle1: Greencircle14,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Schw. Nachtschatten",
     nameEn: "Schw. Nachtschatten",
     circle1: Greencircle34,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
   {
     nameDe: "Hirse",
     nameEn: "Hirse",
     circle1: Greencircle0,
     circle2: Greencircle1,
-    image:
-      "",
+    image: "",
   },
-  
+
   // More people...
 ];
 
@@ -294,7 +283,7 @@ export default function valentia(props) {
             <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
               <img
                 className="h-56 w-full object-cover lg:absolute lg:h-full"
-                src={ValentiaCorn}
+                src={ValentiaIntroImg}
                 alt="Valentia Corn"
               />
             </div>
@@ -459,86 +448,114 @@ export default function valentia(props) {
               />
             </div>
           </div>
-          <div className="relative pt-16 pb-16 px-2 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
-            <div className="lg:col-start-2 lg:pl-8">
-              <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-              <div className="">
-                <table className="min-w-full">
-                  <thead className="">
-                    <tr>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider"
-                      >
-                        Befall
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider"
-                      >
-                        Valentia 1,5 l/ha
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider"
-                      >
-                        Valentia 1,2 l/ha <br />+ Mesotrione
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="">
-                    {corntable.map((elm) => (
-                      <tr key={elm.nameDe}>
-                        <td className="px-6 py-2 whitespace-nowrap ">
-                          <div className="flex items-center">
-                            {/* <div className="flex-shrink-0 h-10 w-10">
-                              <img
-                                className="h-10 w-10 rounded-full"
-                                src={elm.image}
-                                alt=""
-                              />
-                            </div> */}
-                            <div className="ml-4">
-                              <div className="font-medium text-lg text-white">
-                                {props.lang ==='de' ? elm.nameDe : elm.nameEn}
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-8 py-4 whitespace-nowrap">
-                          <div className="grid place-items-center">
-                            <img
-                              className="w-6 h-6"
-                              src={elm.circle1}
-                              alt={elm.nameEn}
-                            />
-                          </div>
-                        </td>
-                        <td className="px-8 py-4 whitespace-nowrap">
-                          <div className="grid place-items-center">
-                            <img
-                              className="w-6 h-6"
-                              src={elm.circle2}
-                              alt={elm.nameEn}
-                            />
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="text-white text-xs inline-flex my-4">
-                    <img className="w-4 h-4 mr-1" src={Greencircle1} alt="top"/>{" "}
-                    <p> sehr gut bis gut bekämpfbar</p>
-                    <img className="w-4 h-4 mr-1" src={Greencircle34} alt="top"/>{" "}
-                    <p> ausreichend bekämpfbar</p>
-                    <img className="w-4 h-4 mr-1" src={Greencircle14} alt="top"/>{" "}
-                    <p> nicht ausreichend bekämpfbar</p>
-                    <img className="w-4 h-4 mr-1" src={Greencircle0} alt="top"/>{" "}
-                    <p> nicht bekämpfbar</p>
-                </div>
-                <div>
-                    <p className="text-white text-xs my-4">*Blattmasse, wüchsige Bedingungen</p>
+          <div className="flex flex-col">
+            <div className="overflow-x-auto mx-6 ">
+              <div className="py-2 align-middle inline-block min-w-full">
+              <div className="relative pt-16 pb-16 px-2 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+                <div className="lg:col-start-2 lg:pl-8">
+                  <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
+                    <div className="">
+                      <table className="min-w-full">
+                        <thead className="">
+                          <tr>
+                            <th
+                              scope="col"
+                              className="px-6 py-3 text-left text-xs font-bold text-white uppercase tracking-wider"
+                            >
+                              Befall
+                            </th>
+                            <th
+                              scope="col"
+                              className="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider"
+                            >
+                              Valentia 1,5 l/ha
+                            </th>
+                            <th
+                              scope="col"
+                              className="px-6 py-3 text-center text-xs font-bold text-white uppercase tracking-wider"
+                            >
+                              Valentia 1,2 l/ha <br />+ Mesotrione
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="">
+                          {corntable.map((elm) => (
+                            <tr key={elm.nameDe}>
+                              <td className="px-6 py-2 whitespace-nowrap ">
+                                <div className="flex items-center">
+                                  {/* <div className="flex-shrink-0 h-10 w-10">
+                                    <img
+                                      className="h-10 w-10 rounded-full"
+                                      src={elm.image}
+                                      alt=""
+                                    />
+                                  </div> */}
+                                  <div className="ml-4">
+                                    <div className="font-medium text-lg text-white">
+                                      {props.lang === "de"
+                                        ? elm.nameDe
+                                        : elm.nameEn}
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td className="px-8 py-4 whitespace-nowrap">
+                                <div className="grid place-items-center">
+                                  <img
+                                    className="w-6 h-6"
+                                    src={elm.circle1}
+                                    alt={elm.nameEn}
+                                  />
+                                </div>
+                              </td>
+                              <td className="px-8 py-4 whitespace-nowrap">
+                                <div className="grid place-items-center">
+                                  <img
+                                    className="w-6 h-6"
+                                    src={elm.circle2}
+                                    alt={elm.nameEn}
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      <div className="text-white text-xs inline-flex mr-4 mt-4">
+                        <img
+                          className="w-4 h-4 mx-1"
+                          src={Greencircle1}
+                          alt="top"
+                        />{" "}
+                        <p> sehr gut bis gut bekämpfbar</p>
+                        <img
+                          className="w-4 h-4 mx-1 ml-4"
+                          src={Greencircle34}
+                          alt="top"
+                        />{" "}
+                        <p> ausreichend bekämpfbar</p>
+                      </div>
+                      <div className="text-white text-xs inline-flex my-4">
+                        <img
+                          className="w-4 h-4 mx-1"
+                          src={Greencircle14}
+                          alt="top"
+                        />{" "}
+                        <p> nicht ausreichend bekämpfbar</p>
+                        <img
+                          className="w-4 h-4 mx-1 ml-4"
+                          src={Greencircle0}
+                          alt="top"
+                        />{" "}
+                        <p> nicht bekämpfbar</p>
+                      </div>
+                      <div>
+                        <p className="text-white text-xs my-4">
+                          *Blattmasse, wüchsige Bedingungen
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
