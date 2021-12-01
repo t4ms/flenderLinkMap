@@ -41,7 +41,7 @@ module.exports = {
           medium: '#DAA201',
           light: '#F3AD16',
           lighter: '#FFEC00',
-        },
+        },  
         borderWidth: {
           DEFAULT: '1px',
           '0': '0',
