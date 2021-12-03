@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 
 import formgroupLogoWhite from "../image/svg/formgroupLogoWhite.svg";
 import formgroupLogoBlack from "../image/svg/formgroupLogoBlack.svg";
+import agroformLogoWhite from "../image/svg/agroform_logo_white.svg";
 import langDe from "../image/svg/lang_de.svg";
 import langEn from "../image/svg/lang_en.svg";
 
@@ -83,12 +84,12 @@ class Navbar extends React.Component {
               {/* Nav 1 - Warum formgroup */}
 
               <a
-                href="/"
+                href="/home"
                 className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white"
               >
                 {this.props.lang === "de"
-                  ? "Warum formgroup?"
-                  : "Why formgroup?"}
+                  ? "Mission & Vision"
+                  : "Mission & Vision"}
               </a>
 
               {/* Nav 2 - Team */}
@@ -97,7 +98,9 @@ class Navbar extends React.Component {
                 href="/team"
                 className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white"
               >
-                Team
+                {this.props.lang === "de"
+                  ? "Team & Regionen"
+                  : "Team & Regions"}
               </a>
 
               {/* Nav 3 - Produkte & Lösungen */}
@@ -166,26 +169,39 @@ class Navbar extends React.Component {
                               </a>
                             ))}
                           </div>
-                          <div className="p-5 bg-fgDefault-dark hover:bg-fgDefault-darker sm:p-8">
+                          <div className="p-5 bg-brown-dark hover:bg-brown-darker sm:p-8">
                             <a
-                              href="/"
+                              href="/portfolio"
                               className="-m-3 p-3 flow-root rounded-md"
                             >
+
+                      
+                              
+
                               <div className="flex items-center">
+                              <img
+                                className="pb-2 h-6 mr-4 w-auto sm:h-10 inline-flex"
+                                src={agroformLogoWhite}
+                                alt="agroform"
+                              /> 
                                 <div className="text-base font-medium text-white">
-                                  formgroup
+                                {this.props.lang === "de"
+                                    ? "- die digitale Agrarplattform der"
+                                    : "- the digital agricultural platform of"}
+                                  
                                 </div>
-                                <span className="ml-3 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium leading-5 bg-white text-fgDefault-medium">
+                                <span className="ml-1 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium leading-5 bg-white text-black">
                                   {this.props.lang === "de"
-                                    ? "LEISTUNGEN"
-                                    : "SERVICES"}
+                                    ? "formgroup"
+                                    : "formgroup"}
                                 </span>
                               </div>
                               <p className="mt-1 text-sm text-white">
                                 {this.props.lang === "de"
-                                  ? "Beispieltext"
-                                  : "Empower your entire team with even more advanced tools."}
+                                  ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte, Lösungen."
+                                  : "Find, compare and learn about the innovative agricultural products, solutions."}
                               </p>
+              
                             </a>
                           </div>
                         </div>
@@ -367,7 +383,7 @@ class Navbar extends React.Component {
                 </div>
                 <div className="mt-12 xl:mt-0">
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  {this.props.lang === "de" ? "Sprache" : "Language"}
+                    {this.props.lang === "de" ? "Sprache" : "Language"}
                   </h3>
                   {/* Language dropdown */}
                   <div className="grid grid-cols-2">

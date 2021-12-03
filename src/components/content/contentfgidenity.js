@@ -6,8 +6,8 @@ import IconKey3 from '../../image/png/whyFormgroup.png'
 
 const keys = [
     { name: 'WAS IST FORMGROUP.', description: 'Formgroup ist ein offenes Netzwerk aus Experten mit branchen- und fach-spezifischem Know-How und regionalen & internationalen Partnern.', icon: IconKey1},
-    { name: 'WAS MACHT FORMGROUP.',description: 'Die formgroup Experten unterstützen Produzenten wie auch Distributoren durch moderne Strategie- und Implementierungsentwicklungen im nationalen wie auch internationale Umfeld.', icon: IconKey2 },
-    { name: 'WARUM FORMGROUP.',description: 'Formgroup bietet Experten eine Plattform auf dem sie ihr einzigartiges branchen-/ fachspezifisches Know-How den Partnern zur Verfügung stellen.', icon: IconKey3 },
+    { name: 'WAS MACHT FORMGROUP.',description: 'Die formgroup Experten unterstützen Produzenten und Distributoren bei der Umsetzung der  Strategie mit modernen Marketingmaßnahmen.', icon: IconKey2 },
+    { name: 'WARUM FORMGROUP.',description: 'Know-How + Erfahrung + Netzwerk = Marktzugang', icon: IconKey3 },
   ]
 
 export default function contentfgidenity() {
@@ -16,10 +16,10 @@ export default function contentfgidenity() {
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-fgDefault-medium uppercase">formgroup-Identität</h2>
         <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl uppercase">
-         Wir formen Lösungen, Innovationen & Produkte
+        We simplify market access
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-        Die Basis der formgroup bilden branchenspezifischen Know-How unserer Experten, regionalem Netzwerk unsere Partner und innovative Plattformen.
+        Wir bringen Kundenwünsche und Produktinnovationen zusammen. Als Ihr Kooperationspartner im Markt sorgen wir für Wachstum.
         </p>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

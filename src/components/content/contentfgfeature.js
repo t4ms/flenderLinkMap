@@ -44,7 +44,7 @@ export default function contentfgfeature() {
             UNSERE LEISTUNGSBEREICHE
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Ziele sind Abläufe effizienter zu gestalten, Handlungsspielräume zu erweitern und Margen zu steigern.
+            Ziel ist es Abläufe effizient zu gestalten, Marktpotentiale zu erkennen und damit Margen zu steigern.
             </p>
           </div>
   

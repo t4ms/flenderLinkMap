@@ -27,7 +27,7 @@ export default function headerformgroup(props) {
                   <FgAnimationText lang={props.lang}/>
                 </h1>
                 <p className="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                {props.lang==="de" ? 'Team erfahrener und vernetzter Experten unterstützt Produzenten und Händler konzeptionell und operativ in allen Fragen rund um ihre Geschäfts-Strategie und Go-to-market Implementierung.' : 'Team of experienced and networked experts supports producers and retailers conceptually and operationally in all questions relating to their business strategy and go-to-market implementation.'}
+                {props.lang==="de" ? 'Team erfahrener und global vernetzter Experten unterstützt Produzenten und Händler in allen Fragen rund um ihre Geschäfts-Strategie und Go-to-market Implementierung.' : 'promise'}
                 
                 </p>
                 {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
