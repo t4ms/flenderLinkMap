@@ -46,13 +46,13 @@ export default function Index() {
                   <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                     <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                       <a
-                        href="#"
+                        href="/"
                         className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-green-light bg-white hover:bg-brown-dark sm:px-8"
                       >
                         Kontakt
                       </a>
                       <a
-                        href="#"
+                        href="/"
                         className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-light hover:bg-opacity-70 sm:px-8"
                       >
                         Informationsmaterial

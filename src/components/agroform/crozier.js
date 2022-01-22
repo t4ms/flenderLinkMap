@@ -6,17 +6,7 @@ import { CheckIcon, ThumbUpIcon, UserIcon } from "@heroicons/react/solid";
 
 import ValentiaIntro from "../../image/svg/Valentia_Intro.svg";
 import ValentiaIntroImg from "../../image/png/img_valentia-intro.png";
-import ValentiaCorn from "../../image/png/valentia_corn.png";
-import ValentiaCereals from "../../image/svg/ICON_fg_cereal.svg";
-import ValentiaCerealsImg from "../../image/jpg/valentia_cereals.jpg";
 import iconCorn from "../../image/svg/ICON_fg_corn.svg";
-import Greencircle1 from "../../image/svg/green_circle_1.svg";
-import Greencircle14 from "../../image/svg/green_circle_1-4.svg";
-import Greencircle34 from "../../image/svg/green_circle_3-4.svg";
-import Yellowcircle1 from "../../image/svg/yellow_circle_1.svg";
-import Yellowcircle14 from "../../image/svg/yellow_circle_1-4.svg";
-import Yellowcircle34 from "../../image/svg/yellow_circle_3-4.svg";
-import Greencircle0 from "../../image/svg/green_circle_0.svg";
 
 const summary = [
   {
@@ -124,32 +114,6 @@ const section3 = [
   {
     descriptionDe: "Die Komplettlösung: Valentia plus Mesotrione",
     descriptionEn: "Leaf active and fast rainfast6",
-  },
-];
-const highlightsCereals = [
-  {
-    descriptionDe: "Der starke Partner für Komplettlösungen",
-    descriptionEn: "1",
-  },
-  {
-    descriptionDe: "Geniale Kombination unterschiedlicher Wirkmechanismen",
-    descriptionEn: "2",
-  },
-  {
-    descriptionDe: "Verlässlich, unkompliziert, schnell und breit wirksam ",
-    descriptionEn: "3",
-  },
-  {
-    descriptionDe: "Sehr gut mischbar und verträglich",
-    descriptionEn: "4",
-  },
-  {
-    descriptionDe: "Herausragende Wirkung gegen Klettenlabkraut jeder Größe – inkl. Spätbehandlung",
-    descriptionEn: "5",
-  },
-  {
-    descriptionDe: "Langer Anwendungszeitraum bis BBCH 45",
-    descriptionEn: "6",
   },
 ];
 
