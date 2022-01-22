@@ -75,7 +75,7 @@ const summary = [
     iconBackground: "bg-green-lighter",
   },
   {
-    id: 4,
+    id: 6,
     contentDe:
       "Hohe Wirkstoffpotenz d.h. geringe Wirkstoffausbringung und Gewässerbelastung",
     contentEn:
@@ -88,7 +88,7 @@ const summary = [
     iconBackground: "bg-green-lighter",
   },
   {
-    id: 5,
+    id: 7,
     contentDe: "4x5l, 800l Palette",
     contentEn: "4x5l, 800l Palette",
     target: "",
@@ -107,51 +107,49 @@ const section3 = [
   },
   {
     descriptionDe: "Gezielt, schnell & sicher im Nachauflauf",
-    descriptionEn: "Leaf active and fast rainfast",
+    descriptionEn: "Leaf active and fast rainfast2",
   },
   {
-    descriptionDe:
-      "Solo stark gegen Kamille, Klette, Nachtschatten, Knöterich-Arten, Franzosenkraut u.a.",
-    descriptionEn: "Leaf active and fast rainfast",
+    descriptionDe: "Solo stark gegen Kamille, Klette, Nachtschatten, Knöterich-Arten, Franzosenkraut u.a.",
+    descriptionEn: "Leaf active and fast rainfast3",
   },
   {
-    descriptionDe:
-      "Wirkungsentfaltung weitgehend unabhängig von Strahlungsintensität oder Wachsschicht ",
-    descriptionEn: "Leaf active and fast rainfast",
+    descriptionDe: "Wirkungsentfaltung weitgehend unabhängig von Strahlungsintensität oder Wachsschicht ",
+    descriptionEn: "Leaf active and fast rainfast4",
   },
   {
     descriptionDe: "Terbuthylazin frei",
-    descriptionEn: "Leaf active and fast rainfast",
+    descriptionEn: "Leaf active and fast rainfast5",
   },
   {
     descriptionDe: "Die Komplettlösung: Valentia plus Mesotrione",
-    descriptionEn: "Leaf active and fast rainfast",
+    descriptionEn: "Leaf active and fast rainfast6",
   },
 ];
 const highlightsCereals = [
   {
     descriptionDe: "Der starke Partner für Komplettlösungen",
-    descriptionEn: "",
+    descriptionEn: "1",
   },
   {
     descriptionDe: "Geniale Kombination unterschiedlicher Wirkmechanismen",
-    descriptionEn: "",
+    descriptionEn: "2",
   },
   {
     descriptionDe: "Verlässlich, unkompliziert, schnell und breit wirksam ",
-    descriptionEn: "",
+    descriptionEn: "3",
   },
   {
     descriptionDe: "Sehr gut mischbar und verträglich",
-    descriptionEn: "",
+    descriptionEn: "4",
   },
   {
     descriptionDe: "Herausragende Wirkung gegen Klettenlabkraut jeder Größe – inkl. Spätbehandlung",
-    descriptionEn: "",
+    descriptionEn: "5",
   },
   {
     descriptionDe: "Langer Anwendungszeitraum bis BBCH 45",
-    descriptionEn: "",
+    descriptionEn: "6",
   },
 ];
 
@@ -511,7 +509,7 @@ export default function valentia(props) {
               <p className="mt-2 text-3xl font-extrabold text-gray-900">
                 Einzigartig in Mais
               </p>
-              <div class="grid place-items-center mt-6">
+              <div className="grid place-items-center mt-6">
                 <img alt="Corn" src={iconCorn} className="w-48" />
               </div>
             </div>
@@ -719,7 +717,7 @@ export default function valentia(props) {
               <p className="mt-2 text-3xl font-extrabold text-gray-900">
                 Top in Getreide
               </p>
-              <div class="grid place-items-center mt-6">
+              <div className="grid place-items-center mt-6">
                 <img alt="Corn" src={ValentiaCereals} className="w-48" />
               </div>
             </div>
@@ -876,7 +874,7 @@ export default function valentia(props) {
                         </tbody>
                       </table>
                     </div>
-                      <div classname="">
+                      <div className="">
                       <div className="text-white text-xs inline-flex mr-4 mt-4">
                         <img
                           className="w-4 h-4 mx-1"

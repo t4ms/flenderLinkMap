@@ -22,7 +22,7 @@ const popUpNav = [
     mol: "(Fluroxypyr 100 g/l, Florasulam 2 g/l)",
     descriptionDe: "Einzigartig in Mais – Top in Getreide",
     descriptionEn: "Unique in corn - top in cereals",
-    href: "./products/valentia",
+    href: "./agroform/valentia",
     icon: iconValentia,
   },
   {
@@ -30,7 +30,7 @@ const popUpNav = [
     description:
       "Das Basisherbizid inKartoffeln und der Resistenzbrecher im Getreide",
     mol: "(Prosulfocarb 800g/l)",
-    href: "#",
+    href: "/agroform/crozier",
     icon: iconCrozier,
   },
   {
@@ -171,14 +171,10 @@ class Navbar extends React.Component {
                           </div>
                           <div className="p-5 bg-brown-dark hover:bg-brown-darker sm:p-8">
                             <a
-                              href="/portfolio"
+                              href="/agroform"
                               className="-m-3 p-3 flow-root rounded-md"
                             >
-
-                      
-                              
-
-                              <div className="flex items-center">
+                            <div className="flex items-center">
                               <img
                                 className="pb-2 h-6 mr-4 w-auto sm:h-10 inline-flex"
                                 src={agroformLogoWhite}

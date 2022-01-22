@@ -1,22 +1,24 @@
 import { React, Fragment, useState } from "react";
 
-import formgroupLogoBlack from "../image/svg/formgroupLogoBlack.svg";
-import iconValentia from "../image/svg/ICON_fg_valentia.svg";
-import iconCrozier from "../image/svg/ICON_fg_crozier.svg";
-import iconBoltXl from "../image/svg/ICON_fg_boltXl.svg";
-import iconHurler from "../image/svg/ICON_fg_hurler.svg";
+import agroformLogoBlack from "../../image/svg/agroform_logo_black.svg";
+import iconValentia from "../../image/svg/ICON_fg_valentia.svg";
+import iconCrozier from "../../image/svg/ICON_fg_crozier.svg";
+import iconBoltXl from "../../image/svg/ICON_fg_boltXl.svg";
+import iconHurler from "../../image/svg/ICON_fg_hurler.svg";
 
-import Valentia from "./product/valentia";
+import Index from "./index";
+import Valentia from "./valentia";
+import Crozier from "./crozier";
 
-import langDe from "../image/svg/lang_de.svg";
-import langEn from "../image/svg/lang_en.svg";
+import langDe from "../../image/svg/lang_de.svg";
+import langEn from "../../image/svg/lang_en.svg";
 
 import { Dialog, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Valentia", href: "", icon: iconValentia, current: true },
-  { name: "Crozier", href: "#", icon: iconCrozier, current: false },
+  { name: "Valentia", href: "/agroform/valentia", icon: iconValentia, current: true },
+  { name: "Crozier", href: "/agroform/crozier", icon: iconCrozier, current: false },
   { name: "Bolt Xl", href: "#", icon: iconBoltXl, current: false },
   { name: "Hurler", href: "#", icon: iconHurler, current: false },
 ];
@@ -25,19 +27,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Portfolio(props) {
+
+export default function Agroform(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
-      {/*
-      This example requires updating your template:
-
-      ```
-      <html class="h-full">
-      <body class="h-full">
-      ```
-    */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -91,10 +86,10 @@ export default function Portfolio(props) {
                 </Transition.Child>
                 <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                   <div className="flex-shrink-0 flex items-center px-4">
-                    <a href='/home'>
+                    <a href='/'>
                     <img
                       className="h-8 w-auto"
-                      src={formgroupLogoBlack}
+                      src={agroformLogoBlack}
                       alt="Workflow"
                    />
                    </a>
@@ -168,11 +163,13 @@ export default function Portfolio(props) {
           <div className="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
+                <a href='/agroform'>
                 <img
                   className="h-6 w-auto"
-                  src={formgroupLogoBlack}
-                  alt="Workflow"
+                  src={agroformLogoBlack}
+                  alt="formgroup"
                 />
+                </a>
               </div>
               <nav className="mt-5 flex-1 px-2 bg-white space-y-1">
                 {navigation.map((item) => (
@@ -247,7 +244,12 @@ export default function Portfolio(props) {
           <main className="flex-1">
             <div className="">
               <div className="-mt-16">
-                <Valentia lang={props.lang} />
+              {
+                props.site === 'valentia' ? <Valentia lang={props.lang} /> :
+                props.site === 'crozier' ? <Crozier lang={props.lang} /> :
+                props.site === 'index' ? <Index lang={props.lang} /> :
+                <Index lang={props.lang} />
+              }
               </div>
             </div>
           </main>
