@@ -9,9 +9,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-          'sans': ['Open Sans', 'sans-serif'],
-          'display': ['Open Sans', 'sans-serif'],
-          'body': ['"Open Sans"', ],
+          'sans': ['Montserrat', 'sans-serif'],
+          'display': ['Montserrat', 'sans-serif'],
+          'body': ['"Montserrat"', ],
       },
       colors:{
         'fgDefault':{

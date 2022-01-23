@@ -3,9 +3,9 @@ import { React, Fragment, useState } from "react";
 import agroformLogoWhite from "../../image/svg/agroform_logo_white.svg";
 import formgroupLogoWhite from "../../image/svg/formgroupLogoWhite.svg";
 
-import iconCan from "../../image/svg/cp_can.svg";
-import iconCrozier from "../../image/svg/ICON_fg_crozier.svg";
-import iconBoltXl from "../../image/svg/ICON_fg_boltXl.svg";
+import iconProductfinder from "../../image/svg/agroProductfinder.svg";
+import iconAgroNews from "../../image/svg/agroNews.svg";
+import iconAgroWorkshop from "../../image/svg/agroWorkshop.svg";
 
 import Index from "./index";
 import Valentia from "./valentia";
@@ -18,23 +18,35 @@ import { Dialog, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
-  { name: "Produktfinder", href: "/agroform#productfinder", icon: iconCan, current: false },
-  { name: "agroNews", href: "#AgroNews", icon: iconCrozier, current: false },
-  { name: "agroWorkshops", href: "#AgroWorkshops", icon: iconBoltXl, current: false },
+  {
+    name: "Produktfinder",
+    href: "/agroform#productfinder",
+    icon: iconProductfinder,
+    current: false,
+  },
+  { name: "agroNews",
+   href: "#AgroNews",
+   icon: iconAgroNews,
+   current: false
+  },
+  {
+    name: "agroWorkshops",
+    href: "#AgroWorkshops",
+    icon: iconAgroWorkshop,
+    current: false,
+  },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-
 export default function Agroform(props) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
-
-    {/* Static sidebar for mobile */}
+      {/* Static sidebar for mobile */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
@@ -88,13 +100,13 @@ export default function Agroform(props) {
                 </Transition.Child>
                 <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                   <div className="flex-shrink-0 flex items-center px-4">
-                    <a href='/agroform'>
-                    <img
-                      className="h-8 w-auto"
-                      src={agroformLogoWhite}
-                      alt="Workflow"
-                   />
-                   </a>
+                    <a href="/agroform">
+                      <img
+                        className="h-8 w-auto"
+                        src={agroformLogoWhite}
+                        alt="agroform"
+                      />
+                    </a>
                   </div>
                   <nav className="mt-5 px-2 space-y-1">
                     {navigation.map((item) => (
@@ -111,7 +123,7 @@ export default function Agroform(props) {
                         <img
                           src={item.icon}
                           alt={item.name}
-                          className="h-18"
+                          className="h-8 mr-4"
                           aria-hidden="true"
                         />
                         {item.name}
@@ -119,13 +131,30 @@ export default function Agroform(props) {
                     ))}
                   </nav>
                 </div>
-                <div className="flex-shrink-0 flex p-4">
+
+                <div className="flex-shrink-0 flex border-t border-brown-light p-2 hover:bg-brown-light">
+                  <div className="xl:mt-0">
+                    <div className="grid grid-cols-1">
+                      <a className="text-white" href="/">
+                        <span className="font-bold">agro</span>form eine Plattform der
+                        <br />
+                        <img
+                          className="h-8 w-32 grid"
+                          src={formgroupLogoWhite}
+                          alt="Deutsch"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 flex border-t border-brown-light p-4">
                   <div className="xl:mt-0">
                     <div className="grid grid-cols-2">
                       <div className="">
                         <button
                           onClick={(e) => props.handleLang("de")}
-                          className="rounded-md px-6 py-2 inline-flex items-center justify-center text-white hover:bg-brown-dark"
+                          className="rounded-md px-6 py-2 inline-flex items-center justify-center text-white hover:bg-brown-light"
                         >
                           <img
                             className="h-8 w-8 rounded-full inline"
@@ -138,7 +167,7 @@ export default function Agroform(props) {
                       <div>
                         <button
                           onClick={(e) => props.handleLang("en")}
-                          className="rounded-md px-6 py-2 inline-flex items-center justify-center text-white hover:bg-brown-dark"
+                          className="rounded-md px-6 py-2 inline-flex items-center justify-center text-white hover:bg-brown-light"
                         >
                           <img
                             className="h-8 w-8 rounded-full inline"
@@ -159,20 +188,18 @@ export default function Agroform(props) {
           </Dialog>
         </Transition.Root>
 
-
-
         {/* Static sidebar for desktop */}
         <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex-1 flex flex-col min-h-0 border-r border-brown-light bg-brown-medium">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               <div className="flex items-center flex-shrink-0 px-4">
-                <a href='/agroform'>
-                <img
-                  className="h-6 w-auto"
-                  src={agroformLogoWhite}
-                  alt="formgroup"
-                />
+                <a href="/agroform">
+                  <img
+                    className="h-6 w-auto"
+                    src={agroformLogoWhite}
+                    alt="agroform"
+                  />
                 </a>
               </div>
               <nav className="mt-5 flex-1 px-2 space-y-1">
@@ -203,19 +230,17 @@ export default function Agroform(props) {
               <div className="xl:mt-0">
                 <div className="grid grid-cols-1">
                   <a className="text-white" href="/">
-                  agroform eine Plattform der
-                  <br/>
-                  <img
-                        className="h-8 w-32 grid"
-                        src={formgroupLogoWhite}
-                        alt="Deutsch"
-                      />
+                    <span className="font-bold">agro</span>form eine Plattform der
+                    <br />
+                    <img
+                      className="h-8 w-32 grid"
+                      src={formgroupLogoWhite}
+                      alt="Deutsch"
+                    />
                   </a>
                 </div>
               </div>
             </div>
-          
-
 
             <div className="flex-shrink-0 flex border-t border-brown-light p-2">
               <div className="xl:mt-0">
@@ -268,12 +293,15 @@ export default function Agroform(props) {
           <main className="flex-1">
             <div className="">
               <div className="-mt-16">
-              {
-                props.site === 'valentia' ? <Valentia lang={props.lang} /> :
-                props.site === 'crozier' ? <Crozier lang={props.lang} /> :
-                props.site === 'index' ? <Index lang={props.lang} /> :
-                <Index lang={props.lang} />
-              }
+                {props.site === "valentia" ? (
+                  <Valentia lang={props.lang} />
+                ) : props.site === "crozier" ? (
+                  <Crozier lang={props.lang} />
+                ) : props.site === "index" ? (
+                  <Index lang={props.lang} />
+                ) : (
+                  <Index lang={props.lang} />
+                )}
               </div>
             </div>
           </main>

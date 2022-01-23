@@ -35,7 +35,7 @@ const products = [
     slogan: 'Einzigartig in Mais – Top in Getreide',
     field1: 'Getreide',
     styling1:'text-white bg-yellow-light',
-    field2: 'Boden',
+    field2: 'Kartoffeln',
     styling2:'text-white bg-brown-medium',
     link: './agroform/crozier',
     image: iconCrozier
@@ -75,7 +75,7 @@ export default function Index() {
                     />
                     </div>
                   <h1 className="bg-green-lighter bg-opacity-50 py-8 text-center text-2xl font-bold uppercase tracking-tight sm:text-3xl lg:text-4xl">
-                    <span className="block text-white">Unsere Produkten, Know-how und Expertise</span>
+                    <span className="block text-white">Unsere Produkte, Know-how und Expertise</span>
                     <span className="block text-white">im Bereich Pflanzenschutz auf einer Platform</span>
                   </h1>
                   <p className="mt-6 font-bold max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
@@ -130,13 +130,13 @@ export default function Index() {
                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                   <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                   <img className="my-4 h-24 mx-auto" src={IconSoil} alt="Soil" />
-                    <span className="block">Boden</span>
+                    <span className="block">Kartoffeln</span>
                   </h1>
                 </div>
                 <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                   <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                   <img className="my-4 h-24 mx-auto" src={IconGrassland} alt="Grassland" />
-                    <span className="block">Wiesen</span>
+                    <span className="block">Grünland</span>
                   </h1>
                 </div>
               </div>
