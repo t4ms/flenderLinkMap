@@ -3,11 +3,49 @@ import React from "react";
 import AgroformHeader from "../../image/jpg/agroform_headerIntro.jpg";
 import agroformLogoWhite from "../../image/svg/agroform_logo_white.svg";
 
+import iconValentia from "../../image/svg/ICON_fg_valentia.svg";
+import iconCrozier from "../../image/svg/ICON_fg_crozier.svg";
+// import iconBoltXl from "../../image/svg/ICON_fg_boltXl.svg";
+// import iconHurler from "../../image/svg/ICON_fg_hurler.svg";
+
 import IconCereal from "../../image/svg/ICON_fg_cereal.svg"
 import IconCorn from "../../image/svg/ICON_fg_corn.svg"
 import IconGrassland from "../../image/svg/ICON_fg_grassland.svg"
 import IconSoil from "../../image/svg/ICON_fg_soil.svg"
 import IconRape from "../../image/svg/ICON_fg_rape.svg"
+
+const products = [
+  {
+    name: 'Valentia',
+    ingredient1: 'Fluroxypyr 100g/l +',
+    ingredient2: 'Florasulam 2g/l',
+    role: 'Admin',
+    slogan: 'Einzigartig in Mais – Top in Getreide',
+    field1: 'Mais',
+    styling1:'text-white bg-green-light',
+    field2: 'Getreide',
+    styling2:'text-white bg-yellow-light',
+    link: './agroform/valentia',
+    image: iconValentia
+  },
+  {
+    name: 'Crozier',
+    ingredient1: 'Fluroxypyr 100g/l +',
+    ingredient2: 'Florasulam 2g/l',
+    slogan: 'Einzigartig in Mais – Top in Getreide',
+    field1: 'Getreide',
+    styling1:'text-white bg-yellow-light',
+    field2: 'Boden',
+    styling2:'text-white bg-brown-medium',
+    link: './agroform/crozier',
+    image: iconCrozier
+  },
+
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 
 export default function Index() {
@@ -36,9 +74,9 @@ export default function Index() {
                       alt="agroform"
                     />
                     </div>
-                  <h1 className="text-center text-2xl font-bold uppercase tracking-tight sm:text-3xl lg:text-4xl">
+                  <h1 className="bg-green-lighter bg-opacity-50 py-8 text-center text-2xl font-bold uppercase tracking-tight sm:text-3xl lg:text-4xl">
                     <span className="block text-white">Unsere Produkten, Know-how und Expertise</span>
-                    <span className="block text-white">im Bereich Pflanzenschutz</span>
+                    <span className="block text-white">im Bereich Pflanzenschutz auf einer Platform</span>
                   </h1>
                   <p className="mt-6 font-bold max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl">
                   Wir wollen nichts weniger, als in der Landwirtschaft Qualitätsprodukte vom Produzenten durch enge Zusammenarbeit mit dem Großhandel zu ihrem vollen Potenzial zu bringen - durch langfristige Beziehungen den Ertrag der Kunden zu verbessern und Produzenten mit nachhaltiger Entwicklung zu gewinnen.
@@ -107,6 +145,77 @@ export default function Index() {
         </div>
 
         {/* More main page content here... */}
+
+        <section id="productfinder">
+          <div className="flex flex-col lg:m-5 sm:m-5">
+            <div className="-my-2 overflow-x-auto sm:-mx-3 lg:-mx-8">
+              <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Produkt
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Wirkstoff
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                          Anwendung
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      {products.map((product) => (
+                        <tr key={product.name} className="hover:bg-green-lighter hover:bg-opacity-25">
+                          <td className="px-6 py-4 whitespace-nowrap">
+                          <a href={product.link}>
+                            <div className="flex items-center">
+                              <div className="flex-shrink-0 h-16 w-16">
+                                <img className="h-16 w-16" src={product.image} alt="" />
+                              </div>
+                              <div className="ml-4">
+                                <div className="text-sm font-medium text-gray-900">{product.name}</div>
+                                <div className="text-sm text-gray-500">{product.slogan}</div>
+                              </div>
+                            </div>
+                            </a>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                          <a href={product.link}>
+                            <div className="text-sm text-gray-900">{product.ingredient1}</div>
+                            <div className="text-sm text-gray-900">{product.ingredient2}</div>
+                          </a>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                          <a href={product.link}>
+                            <span className={classNames(product.styling1, "mx-0.5 px-2 inline-flex text-xs font-semibold leading-5 uppercase tracking-wide rounded-full")}>
+                              {product.field1}
+                            </span>
+                            <span className={classNames(product.styling2, "mx-0.5 px-2 inline-flex text-xs font-semibold leading-5 uppercase tracking-wide rounded-full")}>
+                              {product.field2}
+                            </span>
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
     </div>
     
