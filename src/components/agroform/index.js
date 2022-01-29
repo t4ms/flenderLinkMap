@@ -2,7 +2,7 @@ import React from "react";
 
 import AgroformHeader from "../../image/jpg/agroform_headerIntro.jpg";
 import AgroformIcon from "../../image/svg/agroform_icon.svg";
-import agroformLogoWhite from "../../image/svg/agroform_logo_white.svg";
+// import agroformLogoWhite from "../../image/svg/agroform_logo_white.svg";
 
 import berndBund from "../../image/jpg/formgroup-berndBund.jpg";
 
