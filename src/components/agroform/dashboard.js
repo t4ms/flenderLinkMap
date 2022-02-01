@@ -24,14 +24,14 @@ const navigation = [
     icon: iconProductfinder,
     current: false,
   },
-  { name: "agroNews",
-   href: "#AgroNews",
+  { name: "Marktreport",
+   href: "/agroform#Reports",
    icon: iconAgroNews,
    current: false
   },
   {
-    name: "agroWorkshops",
-    href: "#AgroWorkshops",
+    name: "Workshops",
+    href: "/agroform#Workshops",
     icon: iconAgroWorkshop,
     current: false,
   },

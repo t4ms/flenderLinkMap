@@ -174,17 +174,16 @@ class Navbar extends React.Component {
                               href="/agroform"
                               className="-m-3 p-3 flow-root rounded-md"
                             >
-                            <div className="flex items-center">
-                              <img
-                                className="pb-2 h-6 mr-4 w-auto sm:h-10 inline-flex"
-                                src={agroformLogoWhite}
-                                alt="agroform"
-                              /> 
+                              <div className="flex items-center">
+                                <img
+                                  className="pb-2 h-6 mr-4 w-auto sm:h-10 inline-flex"
+                                  src={agroformLogoWhite}
+                                  alt="agroform"
+                                />
                                 <div className="text-base font-medium text-white">
-                                {this.props.lang === "de"
+                                  {this.props.lang === "de"
                                     ? "- die digitale Agrarplattform der"
                                     : "- the digital agricultural platform of"}
-                                  
                                 </div>
                                 <span className="ml-1 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium leading-5 bg-white text-black">
                                   {this.props.lang === "de"
@@ -197,7 +196,6 @@ class Navbar extends React.Component {
                                   ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte, Lösungen."
                                   : "Find, compare and learn about the innovative agricultural products, solutions."}
                               </p>
-              
                             </a>
                           </div>
                         </div>
@@ -304,8 +302,8 @@ class Navbar extends React.Component {
             className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-              <div className="pt-5 pb-6 px-5">
-                <div className="flex items-center justify-between">
+              <div className="pt-5 pb-6">
+                <div className="flex items-center justify-between px-5">
                   <div>
                     <img
                       className="h-8 w-auto"
@@ -321,29 +319,33 @@ class Navbar extends React.Component {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <nav className="grid gap-6">
-                    {popUpNav.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-100"
-                      >
-                        <div className="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-md text-white">
-                          <img
-                            className="pb-2 h-24 w-auto"
-                            src={item.icon}
-                            alt={item.name}
-                          />
+                  <div className="p-5 bg-brown-dark hover:bg-brown-darker sm:p-12">
+                    <a
+                      href="/agroform"
+                      className="-m-3 p-3 flow-root rounded-md"
+                    >
+                        <img
+                          className="pb-2 h-10 mr-4 w-auto sm:h-10 inline-flex"
+                          src={agroformLogoWhite}
+                          alt="agroform"
+                        />
+                      <div className="flex items-center">
+                        <div className="text-base font-medium text-white">
+                          {this.props.lang === "de"
+                            ? "- die digitale Agrarplattform der"
+                            : "- the digital agricultural platform of"}
                         </div>
-                        <span className="ml-4 text-base font-medium text-gray-900">
-                          {item.name}
+                        <span className="ml-1 inline-flex items-center px-3 py-0.5 rounded-full text-base font-medium leading-5 bg-white text-black">
+                          {this.props.lang === "de" ? "formgroup" : "formgroup"}
                         </span>
-                        <span className="ml-4 text-base italic text-fgDefault-darker">
-                          {item.mol}
-                        </span>
-                      </a>
-                    ))}
-                  </nav>
+                      </div>
+                      <p className="mt-1 text-sm text-white">
+                        {this.props.lang === "de"
+                          ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte, Lösungen."
+                          : "Find, compare and learn about the innovative agricultural products, solutions."}
+                      </p>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="py-6 px-5">
@@ -358,7 +360,7 @@ class Navbar extends React.Component {
                   </a>
 
                   <a
-                    href="/"
+                    href="/team"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     Team
@@ -368,7 +370,7 @@ class Navbar extends React.Component {
                     href="/"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
-                    {this.props.lang === "de" ? "Leistungen" : "Services"}
+                    {this.props.lang === "de" ? "Impressum" : "Imprint"}
                   </a>
                   <a
                     href="/"
@@ -387,6 +389,7 @@ class Navbar extends React.Component {
                       <button
                         onClick={(e) => this.props.handleLangHome("de")}
                         className="bg-white rounded-md px-16 py-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fgDefault-medium"
+                        aria-hidden="true"
                       >
                         <img
                           className="h-8 w-8 rounded-full inline"
@@ -400,6 +403,7 @@ class Navbar extends React.Component {
                       <button
                         onClick={(e) => this.props.handleLangHome("en")}
                         className="bg-white rounded-md px-16 py-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fgDefault-medium"
+                        aria-hidden="true"
                       >
                         <img
                           className="h-8 w-8 rounded-full inline"
