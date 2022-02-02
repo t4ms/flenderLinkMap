@@ -125,10 +125,10 @@ export default class Index extends Component {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+                    <div className="mt-8 lg:mt-0 lg:col-span-6">
                       <div className="sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden">
-                        <div className="px-4 py-8 sm:px-10">
-                          <div className="my-10 mx-auto flex justify-center">
+                        <div className="px-4 py-8">
+                          <div className="mx-auto flex justify-center">
                             <img
                               src={AgroformIcon}
                               className=""
@@ -166,9 +166,9 @@ export default class Index extends Component {
                   Die Produkte unserer Partner sind vielseitig anwendbar
                   speziell in den Bereichen:
                 </p>
-                <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                <div className="mt-3 grid grid-cols-5 gap-8 lg:grid-cols-5 overflow-x-auto">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
@@ -180,7 +180,7 @@ export default class Index extends Component {
                   </div>
                   </button>
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
@@ -192,7 +192,7 @@ export default class Index extends Component {
                   </div>
                   </button>
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
@@ -204,7 +204,7 @@ export default class Index extends Component {
                   </div>
                   </button>
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
@@ -216,7 +216,7 @@ export default class Index extends Component {
                   </div>
                   </button>
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
