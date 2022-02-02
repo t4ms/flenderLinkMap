@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import AgroformHeader from "../../image/jpg/agroform_headerIntro.jpg";
 import AgroNewsImg from "../../image/jpg/agroNews_image.jpg";
@@ -8,10 +8,11 @@ import AgroformIcon from "../../image/svg/agroform_icon.svg";
 
 import berndBund from "../../image/jpg/formgroup-berndBund.jpg";
 
-import iconValentia from "../../image/svg/ICON_fg_valentia.svg";
-import iconCrozier from "../../image/svg/ICON_fg_crozier.svg";
-// import iconBoltXl from "../../image/svg/ICON_fg_boltXl.svg";
-// import iconHurler from "../../image/svg/ICON_fg_hurler.svg";
+import {productData} from './products'
+
+import ProductList from './productList'
+
+import {news} from './news'
 
 import IconCereal from "../../image/svg/ICON_fg_cereal.svg";
 import IconCorn from "../../image/svg/ICON_fg_corn.svg";
@@ -19,94 +20,42 @@ import IconGrassland from "../../image/svg/ICON_fg_grassland.svg";
 import IconSoil from "../../image/svg/ICON_fg_soil.svg";
 import IconRape from "../../image/svg/ICON_fg_rape.svg";
 
-import { DocumentDownloadIcon, MailIcon } from "@heroicons/react/solid";
-
-const products = [
-  {
-    name: "Valentia",
-    ingredient1: "Fluroxypyr 100g/l +",
-    ingredient2: "Florasulam 2g/l",
-    role: "Admin",
-    slogan: "Einzigartig in Mais – Top in Getreide",
-    field1: "Mais",
-    styling1: "text-white bg-green-light",
-    field2: "Getreide",
-    styling2: "text-white bg-yellow-light",
-    link: "./agroform/valentia",
-    image: iconValentia,
-  },
-  {
-    name: "Crozier",
-    ingredient1: "Fluroxypyr 100g/l +",
-    ingredient2: "Florasulam 2g/l",
-    slogan: "Einzigartig in Mais – Top in Getreide",
-    field1: "Getreide",
-    styling1: "text-white bg-yellow-light",
-    field2: "Kartoffeln",
-    styling2: "text-white bg-brown-medium",
-    link: "./agroform/crozier",
-    image: iconCrozier,
-  },
-];
-
-const news = [
-  {
-    id: 1,
-    content: "agroform - Marktreport",
-    target: "Hot News",
-    href: "#",
-    date: "KW07",
-    icon: DocumentDownloadIcon,
-    iconBackground: "bg-green-lighter",
-  },
-  {
-    id: 2,
-    content: "Advanced to phone screening by",
-    target: "Bethany Blake",
-    href: "#",
-    date: "Sep 22",
-    datetime: "2020-09-22",
-    icon: DocumentDownloadIcon,
-    iconBackground: "bg-blue-500",
-  },
-  {
-    id: 3,
-    content: "Completed phone screening with",
-    target: "Martha Gardner",
-    href: "#",
-    date: "KW07",
-    datetime: "2020-09-28",
-    icon: DocumentDownloadIcon,
-    iconBackground: "bg-green-500",
-  },
-  {
-    id: 4,
-    content: "Advanced to interview by",
-    target: "Bethany Blake",
-    href: "#",
-    date: "Sep 30",
-    datetime: "2020-09-30",
-    icon: DocumentDownloadIcon,
-    iconBackground: "bg-blue-500",
-  },
-  {
-    id: 5,
-    content: "Completed interview with",
-    target: "Katherine Snyder",
-    href: "#",
-    date: "Oct 4",
-    datetime: "2020-10-04",
-    icon: DocumentDownloadIcon,
-    iconBackground: "bg-green-500",
-  },
-];
+import { MailIcon } from "@heroicons/react/solid";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+ 
 
-export default function Index() {
-  return (
+
+export default class Index extends Component {
+
+  state={
+    products:productData,
+    filterState: productData,
+  }
+
+  
+
+  handleFilter=(elm)=>{
+    let filterElm;
+
+    if (elm.target.alt===""){
+      filterElm=this.state.products
+    }
+    else{
+      filterElm=this.state.products.filter(item=>(item.field1===elm.target.alt || item.field2===elm.target.alt))
+    }
+
+    this.setState({
+      filterState: filterElm
+    })
+  }
+
+  render() {  
+    
+    return (
+      
     <div>
       <main className="bg-brown-darker">
         <div>
@@ -138,19 +87,14 @@ export default function Index() {
                         </a>
                         <h1 className="mt-4 text-xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-3xl xl:text-4xl">
                           <span className="md:block">
-                            Unsere Produkte, Know-how und Expertise
+                            agroform - Unsere Produkte, Know-how und Expertise
                           </span>{" "}
                           <span className="text-green-lighter md:block">
-                            im Bereich Pflanzenschutz auf einer Platform
+                            im Bereich Landwirtschaft auf einer Plattform
                           </span>
                         </h1>
                         <p className="mt-3 text-base font-semibold text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                          Wir wollen nichts weniger, als in der Landwirtschaft
-                          Qualitätsprodukte vom Produzenten durch enge
-                          Zusammenarbeit mit dem Großhandel zu ihrem vollen
-                          Potenzial zu bringen - durch langfristige Beziehungen
-                          den Ertrag der Kunden zu verbessern und Produzenten
-                          mit nachhaltiger Entwicklung zu gewinnen.
+                        Wir wollen nichts weniger, als in der Landwirtschaft Qualitätsprodukte vom Produzenten durch enge Zusammenarbeit mit dem Großhandel zu ihrem vollen Potenzial zu bringen - durch langfristige Beziehungen den Ertrag der Kunden zu verbessern und Produzenten mit nachhaltiger Entwicklung zu gewinnen.
                         </p>
                         <p className="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
                           agroform Expert
@@ -223,6 +167,7 @@ export default function Index() {
                   speziell in den Bereichen:
                 </p>
                 <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                  <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
@@ -233,6 +178,8 @@ export default function Index() {
                       <span className="block text-white">Getreide</span>
                     </h1>
                   </div>
+                  </button>
+                  <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
@@ -243,6 +190,8 @@ export default function Index() {
                       <span className="block text-white">Mais</span>
                     </h1>
                   </div>
+                  </button>
+                  <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
@@ -253,16 +202,20 @@ export default function Index() {
                       <span className="block text-white">Raps</span>
                     </h1>
                   </div>
+                  </button>
+                  <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
                         src={IconSoil}
-                        alt="Soil"
+                        alt="Potato"
                       />
                       <span className="block text-white">Kartoffeln</span>
                     </h1>
                   </div>
+                  </button>
+                  <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
                   <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
@@ -273,100 +226,14 @@ export default function Index() {
                       <span className="block text-white">Grünland</span>
                     </h1>
                   </div>
+                  </button>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col">
               <div className="overflow-x-auto">
-                <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                  <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                    <table className="min-w-full divide-y divide-gray-200">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                          >
-                            Produkt
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                          >
-                            Wirkstoff
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                          >
-                            Anwendung
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="bg-white divide-y divide-gray-200">
-                        {products.map((product) => (
-                          <tr
-                            key={product.name}
-                            className="hover:bg-green-lighter hover:bg-opacity-25"
-                          >
-                            <td className="px-6 py-4 whitespace-nowrap">
-                              <a href={product.link}>
-                                <div className="flex items-center">
-                                  <div className="flex-shrink-0 h-16 w-16">
-                                    <img
-                                      className="h-16 w-16"
-                                      src={product.image}
-                                      alt=""
-                                    />
-                                  </div>
-                                  <div className="ml-4">
-                                    <div className="text-sm font-medium text-gray-900">
-                                      {product.name}
-                                    </div>
-                                    <div className="text-sm text-gray-500">
-                                      {product.slogan}
-                                    </div>
-                                  </div>
-                                </div>
-                              </a>
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                              <a href={product.link}>
-                                <div className="text-sm text-gray-900">
-                                  {product.ingredient1}
-                                </div>
-                                <div className="text-sm text-gray-900">
-                                  {product.ingredient2}
-                                </div>
-                              </a>
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                              <a href={product.link}>
-                                <span
-                                  className={classNames(
-                                    product.styling1,
-                                    "mx-0.5 px-2 inline-flex text-xs font-semibold leading-5 uppercase tracking-wide rounded-full"
-                                  )}
-                                >
-                                  {product.field1}
-                                </span>
-                                <span
-                                  className={classNames(
-                                    product.styling2,
-                                    "mx-0.5 px-2 inline-flex text-xs font-semibold leading-5 uppercase tracking-wide rounded-full"
-                                  )}
-                                >
-                                  {product.field2}
-                                </span>
-                              </a>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                <ProductList products={this.state.filterState}/>
               </div>
             </div>
           </section>
@@ -393,11 +260,10 @@ export default function Index() {
                     Agro Marktreport
                   </h2>
                   <p className="mt-1 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
-                    Download your weekly market reports for free
+                  Marktreport unsere Experten zum freien Download
                   </p>
-                  <p className="max-w-xl mt-5 mx-auto text-xl text-brown-light">
-                    Start building for free, then add a site plan to go live.
-                    Account plans unlock additional features.
+                  <p className="max-w-xl mt-5 mx-auto text-xl text-brown-light">  
+                  Unsere Analyse und Einschätzung der aktuellen Marktsituation im Agrarbereich finden Sie hier im regelmäßigen Abstand zum freien Download. Nutzen Sie die weltweiten Informationen für Planungsansätze und Tendenzentscheidungen.
                   </p>
                 </div>
               </div>
@@ -494,22 +360,19 @@ export default function Index() {
                   <h2 className="text-base font-semibold uppercase tracking-wider text-brown-light">
                     Meet the agroform-Experts
                   </h2>
-                  <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                    Shedule workshop with ower agroform expert
+                  <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl"> 
+                  Sie bevorzugen den persönlichen Austausch? In einem Workshop tauschen wir uns gerne mit Ihnen aus.
                   </p>
                   <p className="mt-3 text-lg text-white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                    egestas tempus tellus etiam sed. Quam a scelerisque amet
-                    ullamcorper eu enim et fermentum, augue. Aliquet amet
-                    volutpat quisque ut interdum tincidunt duis.
+                  Aufarbeitung von Themen – Produkteinschätzungen, Planungshilfen, Organisationsentwicklung, Führungs- und Motivationsthemen – werden auf Kunden- und Lieferantenwunsch von unseren Experten erarbeitet und in online-Workshops vermittelt.
                   </p>
                   <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
                       <a
-                        href="/"
+                        href="mailto:info@formgroup.io?subject=agroform - Workshop Anfrage"
                         className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-brown-light"
                       >
-                        Send us an Email
+                        Workshop anfragen
                         <MailIcon
                           className="-mr-1 ml-3 h-5 w-5 text-brown-dark"
                           aria-hidden="true"
@@ -525,4 +388,4 @@ export default function Index() {
       </main>
     </div>
   );
-}
+}}
