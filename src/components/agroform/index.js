@@ -73,8 +73,8 @@ export default class Index extends Component {
                   <div className="absolute inset-0 bg-green-darker mix-blend-overlay" />
                 </div>
                 <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                  <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-                    <div className="p-5 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+                  <div className="lg:grid lg:grid-cols-12 lg:gap-8 ">
+                    <div className=" bg-green-dark bg-opacity-50 p-5 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
                       <div>
                         <a
                           href="/"
@@ -85,7 +85,7 @@ export default class Index extends Component {
                           </span>
                           <span className="ml-4 text-sm">Plattform</span>
                         </a>
-                        <h1 className="mt-4 text-xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-3xl xl:text-4xl">
+                        <h1 className="mt-4 text-2xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-3xl xl:text-4xl">
                           <span className="md:block">
                             agroform - Unsere Produkte, Know-how und Expertise
                           </span>{" "}
@@ -93,7 +93,7 @@ export default class Index extends Component {
                             im Bereich Landwirtschaft auf einer Plattform
                           </span>
                         </h1>
-                        <p className="mt-3 text-base font-semibold text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                        <p className="mt-3 text-base font-medium text-white sm:mt-5 sm:text-lg lg:text-lg xl:text-xl">
                         Wir wollen nichts weniger, als in der Landwirtschaft Qualitätsprodukte vom Produzenten durch enge Zusammenarbeit mit dem Großhandel zu ihrem vollen Potenzial zu bringen - durch langfristige Beziehungen den Ertrag der Kunden zu verbessern und Produzenten mit nachhaltiger Entwicklung zu gewinnen.
                         </p>
                         <p className="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
@@ -126,9 +126,9 @@ export default class Index extends Component {
                       </div>
                     </div>
                     <div className="mt-8 lg:mt-0 lg:col-span-6">
-                      <div className="sm:mx-auto sm:overflow-hidden">
+                      <div className="sm:overflow-hidden">
                         <div className="px-4 py-8">
-                          <div className="mx-auto flex justify-center">
+                          <div className="flex justify-center">
                             <img
                               src={AgroformIcon}
                               className=""
@@ -168,11 +168,11 @@ export default class Index extends Component {
                 </p>
                 <div className="grid grid-cols-5 gap-x-12 overflow-x-auto">
 
-                  <div className="w-48 col-span-1 flex justify-center">
+                  <div className="w-24 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                    <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
+                    <h1 className="text-center item-center text-sm md:text-md font-medium uppercase tracking-tight">
                       <img
-                        className="m-4 h-24 mx-auto"
+                        className="m-4 h-24 w-18 md:w-24 mx-auto"
                         src={IconCereal}
                         alt="Cereals"
                       />
@@ -181,11 +181,11 @@ export default class Index extends Component {
                   </button>
                   </div>
 
-                  <div className="w-48 col-span-1 flex justify-center">
+                  <div className="w-24 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                    <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
+                    <h1 className="text-center item-center text-sm md:text-md font-medium uppercase tracking-tight">
                       <img
-                        className="m-4 h-24 mx-auto"
+                        className="m-4 h-24 w-18 md:w-24 mx-auto"
                         src={IconCorn}
                         alt="Corn"
                       />
@@ -194,11 +194,11 @@ export default class Index extends Component {
                   </button>
                   </div>
 
-                  <div className="w-48 col-span-1 flex justify-center">
+                  <div className="w-24 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                    <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
+                    <h1 className="text-center item-center text-sm md:text-md font-medium uppercase tracking-tight">
                       <img
-                        className="m-4 h-24 mx-auto"
+                        className="m-4 h-24 w-18 md:w-24 mx-auto"
                         src={IconRape}
                         alt="Rape"
                       />
@@ -207,11 +207,11 @@ export default class Index extends Component {
                   </button>
                   </div>
 
-                  <div className="w-48 col-span-1 flex justify-center">
+                  <div className="w-24 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                    <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
+                    <h1 className="text-center item-center text-sm md:text-md font-medium uppercase tracking-tight align-top">
                       <img
-                        className="my-4 h-24 mx-auto"
+                        className="my-4 h-24 w-18 md:w-24 mx-auto"
                         src={IconSoil}
                         alt="Potato"
                       />
@@ -220,15 +220,15 @@ export default class Index extends Component {
                   </button>
                   </div>
 
-                  <div className="w-48 col-span-1 flex justify-center">
+                  <div className="w-24 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                    <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
+                    <h1 className="text-center item-center text-sm md:text-md font-medium uppercase tracking-tight">
                       <img
-                        className="my-4 h-24 mx-auto"
+                        className="my-4 h-24 w-18 md:w-24 mx-auto"
                         src={IconGrassland}
                         alt="Grassland"
                       />
-                      <span className="block text-white">Grünland</span>
+                      <span className="block text-white ">Grünland</span>
                     </h1>
                   </button>
                   </div>
