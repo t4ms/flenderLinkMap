@@ -126,7 +126,7 @@ export default class Index extends Component {
                       </div>
                     </div>
                     <div className="mt-8 lg:mt-0 lg:col-span-6">
-                      <div className="sm:max-w-md sm:w-full sm:mx-auto sm:overflow-hidden">
+                      <div className="sm:mx-auto sm:overflow-hidden">
                         <div className="px-4 py-8">
                           <div className="mx-auto flex justify-center">
                             <img
@@ -166,45 +166,49 @@ export default class Index extends Component {
                   Die Produkte unserer Partner sind vielseitig anwendbar
                   speziell in den Bereichen:
                 </p>
-                <div className="mt-3 grid grid-cols-5 gap-8 lg:grid-cols-5 overflow-x-auto">
+                <div className="grid grid-cols-5 gap-x-12 overflow-x-auto">
+
+                  <div className="w-48 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
-                        className="my-4 h-24 mx-auto"
+                        className="m-4 h-24 mx-auto"
                         src={IconCereal}
                         alt="Cereals"
                       />
                       <span className="block text-white">Getreide</span>
                     </h1>
-                  </div>
                   </button>
+                  </div>
+
+                  <div className="w-48 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
-                        className="my-4 h-24 mx-auto"
+                        className="m-4 h-24 mx-auto"
                         src={IconCorn}
                         alt="Corn"
                       />
                       <span className="block text-white">Mais</span>
                     </h1>
-                  </div>
                   </button>
+                  </div>
+
+                  <div className="w-48 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
-                        className="my-4 h-24 mx-auto"
+                        className="m-4 h-24 mx-auto"
                         src={IconRape}
                         alt="Rape"
                       />
                       <span className="block text-white">Raps</span>
                     </h1>
-                  </div>
                   </button>
+                  </div>
+
+                  <div className="w-48 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
@@ -213,10 +217,11 @@ export default class Index extends Component {
                       />
                       <span className="block text-white">Kartoffeln</span>
                     </h1>
-                  </div>
                   </button>
+                  </div>
+
+                  <div className="w-48 col-span-1 flex justify-center">
                   <button onClick={this.handleFilter} className="opacity-50 hover:opacity-100 focus:opacity-100">
-                  <div className="w-24 col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                     <h1 className="text-center item-center text-md font-medium uppercase tracking-tight">
                       <img
                         className="my-4 h-24 mx-auto"
@@ -225,8 +230,8 @@ export default class Index extends Component {
                       />
                       <span className="block text-white">Grünland</span>
                     </h1>
-                  </div>
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
