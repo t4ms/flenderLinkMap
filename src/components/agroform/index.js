@@ -274,8 +274,8 @@ export default class Index extends Component {
               </div>
             </div>
 
-            <div className="lg: relative mt-12 bg-brown-dark">
-              <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+            <div className="lg: relative mt-3 bg-brown-dark">
+              <div className="mx-auto max-w-7xl w-full pt-6 pb-20 text-center lg:py-48 lg:text-left">
                 <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
                   <div className="flow-root">
                     <ul className="mb-8">
