@@ -131,7 +131,7 @@ export default class Index extends Component {
                           <div className="flex justify-center">
                             <img
                               src={AgroformIcon}
-                              className=""
+                              className="w-96 lg:w-auto"
                               alt="agroform"
                             />
                           </div>
@@ -147,7 +147,7 @@ export default class Index extends Component {
           {/* Logo cloud */}
           <section id="productfinder" className="">
             <div className="">
-              <div className="relative mt-24 p-5">
+              <div className="relative mt-12 p-5">
                 <div
                   className="absolute inset-0 flex items-center"
                   aria-hidden="true"
@@ -161,7 +161,7 @@ export default class Index extends Component {
                 </div>
               </div>
 
-              <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
                 <p className="text-center text-md font-semibold uppercase text-brown-light tracking-wide">
                   Die Produkte unserer Partner sind vielseitig anwendbar
                   speziell in den Bereichen:
@@ -305,9 +305,9 @@ export default class Index extends Component {
                               <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                                 <div>
                                   <p className="text-md text-white hover:underline">
-                                    <a href={event.href}>{event.content} </a>
+                                    <a href={event.href} id={event.id} download>{event.content} </a>
                                     <a
-                                      href={event.href}
+                                      href={event.href} id={event.id} download
                                       className="px-3 py-0.5 mx-1 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-green-light rounded-full"
                                     >
                                       {event.target}
