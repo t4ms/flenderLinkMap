@@ -3,9 +3,9 @@ import { React, Fragment, useState } from "react";
 import agroformLogoWhite from "../../image/svg/agroform_logo_white.svg";
 import formgroupLogoWhite from "../../image/svg/formgroupLogoWhite.svg";
 
-import iconProductfinder from "../../image/svg/agroProductfinder.svg";
-import iconAgroNews from "../../image/svg/agroNews.svg";
-import iconAgroWorkshop from "../../image/svg/agroWorkshop.svg";
+// import iconProductfinder from "../../image/svg/agroProductfinder.svg";
+// import iconAgroNews from "../../image/svg/agroNews.svg";
+// import iconAgroWorkshop from "../../image/svg/agroWorkshop.svg";
 
 import Index from "./index";
 import Valentia from "./valentia";
@@ -15,24 +15,33 @@ import langDe from "../../image/svg/lang_de.svg";
 import langEn from "../../image/svg/lang_en.svg";
 
 import { Dialog, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon, UserGroupIcon, DocumentReportIcon, CubeIcon } from "@heroicons/react/outline";
 
 const navigation = [
   {
     name: "Produktfinder",
     href: "/agroform#productfinder",
-    icon: iconProductfinder,
+    icon: <CubeIcon
+    className="h-6 w-6 text-white"
+    aria-hidden="true"
+  />,
     current: false,
   },
   { name: "Marktreport",
    href: "/agroform#Reports",
-   icon: iconAgroNews,
+   icon:    <DocumentReportIcon
+   className="h-6 w-6 text-white"
+   aria-hidden="true"
+ />,
    current: false
   },
   {
     name: "Workshops",
     href: "/agroform#Workshops",
-    icon: iconAgroWorkshop,
+    icon:    <UserGroupIcon
+    className="h-6 w-6 text-white"
+    aria-hidden="true"
+  />,
     current: false,
   },
 ];
@@ -108,7 +117,7 @@ export default function Agroform(props) {
                       />
                     </a>
                   </div>
-                  <nav className="mt-5 px-2 space-y-1">
+                  <nav className="mt-8 px-4 space-y-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -120,13 +129,8 @@ export default function Agroform(props) {
                           "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                         )}
                       >
-                        <img
-                          src={item.icon}
-                          alt={item.name}
-                          className="h-8 mr-4"
-                          aria-hidden="true"
-                        />
-                        {item.name}
+                        {item.icon}
+                        <p className="pl-4">{item.name}</p>
                       </a>
                     ))}
                   </nav>
@@ -202,7 +206,7 @@ export default function Agroform(props) {
                   />
                 </a>
               </div>
-              <nav className="mt-5 flex-1 px-2 space-y-1">
+              <nav className="mt-8 flex-1 px-4 space-y-4">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -211,16 +215,12 @@ export default function Agroform(props) {
                       item.current
                         ? "bg-brown-light text-white"
                         : "text-white hover:bg-brown-light",
-                      "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+                      "group flex items-center px-2 py-2 text-md font-medium rounded-md"
                     )}
                   >
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className="h-12"
-                      aria-hidden="true"
-                    />
-                    <p className="pl-4">{item.name}</p>
+      
+                      {item.icon}
+                    <p className="pl-8">{item.name}</p>
                   </a>
                 ))}
               </nav>
