@@ -10,6 +10,8 @@ import formgroupLogoWhite from "../../image/svg/formgroupLogoWhite.svg";
 import Index from "./index";
 import Valentia from "./valentia";
 import Crozier from "./crozier";
+import Bolt from "./bolt";
+import Hurler from "./hurler";
 
 import langDe from "../../image/svg/lang_de.svg";
 import langEn from "../../image/svg/lang_en.svg";
@@ -220,7 +222,7 @@ export default function Agroform(props) {
                   >
       
                       {item.icon}
-                    <p className="pl-8">{item.name}</p>
+                    <p className="pl-4">{item.name}</p>
                   </a>
                 ))}
               </nav>
@@ -297,8 +299,10 @@ export default function Agroform(props) {
                   <Valentia lang={props.lang} />
                 ) : props.site === "crozier" ? (
                   <Crozier lang={props.lang} />
-                ) : props.site === "index" ? (
-                  <Index lang={props.lang} />
+                ) : props.site === "bolt" ? (
+                  <Bolt lang={props.lang} />
+                ) : props.site === "hurler" ? (
+                  <Hurler lang={props.lang} />
                 ) : (
                   <Index lang={props.lang} />
                 )}

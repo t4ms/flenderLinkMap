@@ -35,7 +35,7 @@ export const productData = [
       image: iconCrozier,
     },
     {
-      name: "BoltXL",
+      name: "Bolt",
       ingredient1: "250 g/l Prothioconazol",
       ingredient2: "",
       slogan: "Die leistungsstarke Azol-Formulierung",
@@ -45,7 +45,7 @@ export const productData = [
       field2: "Cereals",
       feld2: "Getreide",
       styling2: "text-white bg-yellow-light",
-      link: "./agroform/crozier",
+      link: "./agroform/bolt",
       image: iconBoltXl,
     },
     {
@@ -59,7 +59,7 @@ export const productData = [
       field2: "Corn",
       feld2: "Mais",
       styling2: "text-white bg-green-light",
-      link: "./agroform/crozier",
+      link: "./agroform/hurler",
       image: iconHurler,
     },
   ];

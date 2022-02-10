@@ -2,22 +2,21 @@ import React from "react";
 
 import { ThumbUpIcon, BeakerIcon, CubeIcon, ShieldCheckIcon, PuzzleIcon, CogIcon } from "@heroicons/react/solid";
 
-import iconCrozier from "../../image/svg/ICON_fg_crozier.svg";
+import iconHurler from "../../image/svg/ICON_fg_hurler.svg";
 
-import ImgPotato from "../../image/png/img_potato.png";
-import ImgCreals1 from "../../image/png/img_creals1.png"
+import ImgGrassland from "../../image/png/img_grassland.png"
 const summary = [
   {
     id: 1,
-    contentDe: "800g/l Prosulfocarb",
-    contentEn: "800g/l Prosulfocarb",
+    contentDe: "200 g/l Fluroxypyr",
+    contentEn: "200 g/l Fluroxypyr",
     target: "",
     href: "",
     highlightDe: "",
     highlightEn: "",
     icon: BeakerIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
   {
     id: 2,
@@ -25,11 +24,11 @@ const summary = [
     contentEn: "Emulsionskonzentrat (EC)",
     target: "",
     href: "",
-    highlightDe: "HRAC-Gruppe: N",
-    highlightEn: "HRAC-Gruppe: N",
+    highlightDe: "HRAC-Gruppe: O",
+    highlightEn: "HRAC-Gruppe: O",
     icon: CubeIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
   {
     id: 3,
@@ -40,56 +39,56 @@ const summary = [
     highlightDe: "Nicht bienengefährlich (B4)",
     highlightEn: "Nicht bienengefährlich (B4)",
     icon: ShieldCheckIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
   {
     id: 4,
-    contentDe: "Tankmischpartner zur Bekämpfung von ",
-    contentEn: "Tankmischpartner zur Bekämpfung von ",
+    contentDe: "Top gegen Klettenlabkraut",
+    contentEn: "Top gegen Klettenlabkraut",
     target: "",
     href: "",
-    highlightDe: "Ackerfuchsschwanz & Windhalm",
-    highlightEn: "Ackerfuchsschwanz & Windhalm",
+    highlightDe: "ab 5 °C ",
+    highlightEn: "ab 5 °C ",
     icon: PuzzleIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
   {
     id: 5,
-    contentDe: "Anwendung in Wintergerste, Winterweizen",
-    contentEn: "Anwendung in Wintergerste, Winterweizen",
+    contentDe: "Gezielt und schnell wirksam",
+    contentEn: "Gezielt und schnell wirksam",
     target: "",
     href: "",
-    highlightDe: "im Herbst",
-    highlightEn: "im Herbst",
+    highlightDe: "langer Anwendungszeitraum",
+    highlightEn: "langer Anwendungszeitraum",
     icon: CogIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
   {
     id: 6,
-    contentDe: "Resistenzvorbeugung",
-    contentEn: "Resistenzvorbeugung",
+    contentDe: "Gute Verträglichkeit",
+    contentEn: "Gute Verträglichkeit",
     target: "",
     href: "",
-    highlightDe: "Gute Verträglichkeit",
-    highlightEn: "Gute Verträglichkeit",
+    highlightDe: "idealer Mischpartner",
+    highlightEn: "idealer Mischpartner",
     icon: ShieldCheckIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
   {
     id: 7,
-    contentDe: "Spezialist bei Kartoffeln vor dem Auflaufen",
-    contentEn: "Spezialist bei Kartoffeln vor dem Auflaufen",
+    contentDe: "Günstige Abstandsauflagen",
+    contentEn: "Günstige Abstandsauflagen",
     target: "",
     href: "",
     highlightDe: "",
     highlightEn: "",
     icon: ThumbUpIcon,
-    iconBackground: "bg-yellow-medium",
-    textColor: "text-yellow-medium"
+    iconBackground: "bg-green-medium",
+    textColor: "text-green-medium"
   },
 ];
 
@@ -97,29 +96,29 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function crozier(props) {
+export default function hurler(props) {
   return (
     <>
       <section>
-        <div className="py-10 bg-brown-darker sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div className="py-10 bg-gradient-to-r from-green-darker to-green-dark sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center ">
                 <div className="lg:py-24 mt-16 z-10">
-                  <span className="px-3 py-1.5 mx-1 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-brown-light rounded-full">
-                    {props.lang === "de" ? "Kartoffel" : "Corn"}
+                  <span className="px-3 py-1.5 mx-1 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-green-lighter rounded-full">
+                    {props.lang === "de" ? "Grünfläche" : "Grassland"}
                   </span>
                   <span className="px-3 py-1.5 mx-1 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-yellow-light rounded-full">
                     {props.lang === "de" ? "Getreide" : "Cereals"}
                   </span>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                    <span className="block">CROZIER</span>
+                    <span className="block uppercase">Hurler</span>
                   </h1>
                   <p className="mt-3 text-xl text-yellow-light font-extrabold sm:mt-5 sm:text-xl lg:text-2xl uppercase">
-                  Doppeltes Potential für Ihr Feld
+                  Gegen Unkräuter von früh bis spät
                   </p>
                   <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-2xl">
-                  CROZIER- Leistungsplus gegen Ackerfuchsschwanz
+                  HURLER - Der Klettenlabkraut Star
                   </p>
                   {/* <div className="mt-8">
                     <div className="inline-flex rounded-md shadow">
@@ -142,21 +141,21 @@ export default function crozier(props) {
               <div className="mt-8 -mb-32 lg:mt-32 lg:relative">
                 <div className="mx-auto max-w-sm grid sm:px-8">
                   <img
-                    className="w-ful z-40"
-                    src={iconCrozier}
-                    alt="crozier"
+                    className="w-full z-40"
+                    src={iconHurler}
+                    alt="hurler"
                   />
                 </div>
               </div>
 
-              <div className="absolute insert-0 lg:-ml-8 lg:-mt-48">
+              {/* <div className="absolute insert-0 lg:-ml-8 lg:-mt-48">
                 <img
-                  className="object-cover"
-                  src={ImgPotato}
+                  className="object-cover opacity-25"
+                  src={ImgCreals}
                   alt="People working on laptops"
                 />
-                <div className="absolute inset-0 bg-brown-darker mix-blend-multiply" />
-              </div>
+                <div className="absolute inset-0 bg-green-medium mix-blend-multiply" />
+              </div> */}
             </div>
           </div>
         </div>
@@ -168,16 +167,16 @@ export default function crozier(props) {
             <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
               <img
                 className="h-56 w-full object-cover lg:absolute lg:h-full"
-                src={ImgCreals1}
-                alt="Cereals agroform"
+                src={ImgGrassland}
+                alt="grassland agroform"
               />
             </div>
           </div>
           <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
             <div className="lg:col-start-2 lg:pl-8">
               <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
-                <h2 className="leading-6 text-yellow-medium font-semibold tracking-wide uppercase">
-                  Crozier
+                <h2 className="leading-6 text-green-medium font-semibold tracking-wide uppercase">
+                  Hurler
                 </h2>
                 <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                   Auf einen Blick

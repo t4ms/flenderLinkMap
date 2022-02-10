@@ -9,7 +9,7 @@ import langEn from "../image/svg/lang_en.svg";
 
 import iconValentia from "../image/svg/ICON_fg_valentia.svg";
 import iconCrozier from "../image/svg/ICON_fg_crozier.svg";
-import iconBoltXl from "../image/svg/ICON_fg_boltXl.svg";
+import iconBolt from "../image/svg/ICON_fg_boltXl.svg";
 import iconHurler from "../image/svg/ICON_fg_hurler.svg";
 
 import { Popover, Menu, Transition } from "@headlessui/react";
@@ -38,7 +38,7 @@ const popUpNav = [
     description: "Das Top Azol für Getreide und Raps",
     mol: "(Prothioconazol 250 g/l))",
     href: "#",
-    icon: iconBoltXl,
+    icon: iconBolt,
   },
   {
     name: "Hurler",

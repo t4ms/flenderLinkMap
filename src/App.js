@@ -70,6 +70,24 @@ export default class App extends React.Component {
               />
             )}
           />
+          <Route exact path="/agroform/bolt" render={(props) => (
+              <Dashboard
+                {...props}
+                lang={this.state.lang}
+                site='bolt'
+                handleLang={this.getLang}
+              />
+            )}
+          />
+          <Route exact path="/agroform/hurler" render={(props) => (
+              <Dashboard
+                {...props}
+                lang={this.state.lang}
+                site='hurler'
+                handleLang={this.getLang}
+              />
+            )}
+          />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/about" component={about} />
         </Switch>

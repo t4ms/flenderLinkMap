@@ -2,7 +2,7 @@ import React from "react";
 
 import { DocumentDownloadIcon } from "@heroicons/react/solid";
 
-import { CheckIcon, ThumbUpIcon, UserIcon } from "@heroicons/react/solid";
+import { CheckIcon, ThumbUpIcon, BeakerIcon, CubeIcon, ShieldCheckIcon, PuzzleIcon, CogIcon} from "@heroicons/react/solid";
 
 import ValentiaIntro from "../../image/svg/Valentia_Intro.svg";
 import ValentiaIntroImg from "../../image/png/img_valentia-intro.png";
@@ -27,7 +27,7 @@ const summary = [
     href: "",
     highlightDe: "Resistenzgruppe: 4, 2",
     highlightEn: "Resistenzgruppe: 4, 2",
-    icon: UserIcon,
+    icon: BeakerIcon,
     iconBackground: "bg-green-lighter",
   },
   {
@@ -38,7 +38,7 @@ const summary = [
     href: "",
     highlightDe: "„grüne Formulierung“",
     highlightEn: "„grüne Formulierung“",
-    icon: CheckIcon,
+    icon: CogIcon,
     iconBackground: "bg-green-lighter",
   },
   {
@@ -49,7 +49,7 @@ const summary = [
     href: "",
     highlightDe: "Blattaktiv",
     highlightEn: "Blattaktiv",
-    icon: ThumbUpIcon,
+    icon: ShieldCheckIcon,
     iconBackground: "bg-green-lighter",
   },
   {
@@ -60,7 +60,7 @@ const summary = [
     href: "",
     highlightDe: "Nicht bienengefährlich (B4)",
     highlightEn: "Nicht bienengefährlich (B4)",
-    icon: CheckIcon,
+    icon: ThumbUpIcon,
     iconBackground: "bg-green-lighter",
   },
   {
@@ -84,7 +84,7 @@ const summary = [
     href: "",
     highlightDe: "",
     highlightEn: "",
-    icon: CheckIcon,
+    icon: PuzzleIcon,
     iconBackground: "bg-green-lighter",
   },
   {
@@ -95,7 +95,7 @@ const summary = [
     href: "",
     highlightDe: "",
     highlightEn: "",
-    icon: CheckIcon,
+    icon: CubeIcon,
     iconBackground: "bg-green-lighter",
   },
 ];
