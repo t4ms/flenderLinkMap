@@ -55,7 +55,7 @@ const summary = [
     textColor: "text-yellow-medium"
   },
   {
-    id: 4,
+    id: 5,
     contentDe: "Anwendung in Wintergerste, Winterweizen",
     contentEn: "Anwendung in Wintergerste, Winterweizen",
     target: "",
@@ -67,7 +67,7 @@ const summary = [
     textColor: "text-yellow-medium"
   },
   {
-    id: 4,
+    id: 6,
     contentDe: "Resistenzvorbeugung",
     contentEn: "Resistenzvorbeugung",
     target: "",
@@ -79,7 +79,7 @@ const summary = [
     textColor: "text-yellow-medium"
   },
   {
-    id: 5,
+    id: 7,
     contentDe: "Spezialist bei Kartoffeln vor dem Auflaufen",
     contentEn: "Spezialist bei Kartoffeln vor dem Auflaufen",
     target: "",

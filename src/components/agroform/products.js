@@ -1,13 +1,13 @@
 import iconValentia from "../../image/svg/ICON_fg_valentia.svg";
 import iconCrozier from "../../image/svg/ICON_fg_crozier.svg";
-// import iconBoltXl from "../../image/svg/ICON_fg_boltXl.svg";
-// import iconHurler from "../../image/svg/ICON_fg_hurler.svg";
+import iconBoltXl from "../../image/svg/ICON_fg_boltXl.svg";
+import iconHurler from "../../image/svg/ICON_fg_hurler.svg";
 
 export const productData = [
     {
       name: "Valentia",
-      ingredient1: "Fluroxypyr 100g/l +",
-      ingredient2: "Florasulam 2g/l",
+      ingredient1: "100g/l Fluroxypyr +",
+      ingredient2: "2g/l Florasulam",
       role: "Admin",
       slogan: "Einzigartig in Mais – Top in Getreide",
       field1: "Corn",
@@ -35,17 +35,31 @@ export const productData = [
       image: iconCrozier,
     },
     {
-      name: "Crozier2",
-      ingredient1: "Fluroxypyr 100g/l +",
-      ingredient2: "Florasulam 2g/l",
-      slogan: "Einzigartig in Mais – Top in Getreide",
+      name: "BoltXL",
+      ingredient1: "250 g/l Prothioconazol",
+      ingredient2: "",
+      slogan: "Die leistungsstarke Azol-Formulierung",
+      field1: "Rape",
+      feld1: "Raps",
+      styling1: "text-white bg-yellow-lighter",
+      field2: "Cereals",
+      feld2: "Getreide",
+      styling2: "text-white bg-yellow-light",
+      link: "./agroform/crozier",
+      image: iconBoltXl,
+    },
+    {
+      name: "Hurler",
+      ingredient1: "200 g/l Fluroxypyr",
+      ingredient2: "",
+      slogan: "Gegen Unkräuter von früh bis spät",
       field1: "Cereals",
       feld1: "Getreide",
       styling1: "text-white bg-yellow-light",
-      field2: "Potato",
-      feld2: "Kartoffeln",
-      styling2: "text-white bg-brown-medium",
+      field2: "Corn",
+      feld2: "Mais",
+      styling2: "text-white bg-green-light",
       link: "./agroform/crozier",
-      image: iconCrozier,
+      image: iconHurler,
     },
   ];
