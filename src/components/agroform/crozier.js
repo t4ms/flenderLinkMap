@@ -2,9 +2,8 @@ import React from "react";
 
 import { ThumbUpIcon, BeakerIcon, CubeIcon, ShieldCheckIcon, PuzzleIcon, CogIcon } from "@heroicons/react/solid";
 
-import Potato from "../../image/png/potato_img.png";
-import Creals1 from "../../image/png/creals1-img.png";
-
+import ImgPotato from "../../image/png/img_potato.png";
+import ImgCreals1 from "../../image/png/img_creals1.png"
 const summary = [
   {
     id: 1,
@@ -151,7 +150,7 @@ export default function crozier(props) {
               <div className="absolute insert-0 lg:-ml-8 lg:-mt-48">
                 <img
                   className="object-cover"
-                  src={Potato}
+                  src={ImgPotato}
                   alt="People working on laptops"
                 />
                 <div className="absolute inset-0 bg-brown-dark mix-blend-multiply" />
@@ -167,7 +166,7 @@ export default function crozier(props) {
             <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
               <img
                 className="h-56 w-full object-cover lg:absolute lg:h-full"
-                src={Creals1}
+                src={ImgCreals1}
                 alt="Cereals agroform"
               />
             </div>
