@@ -9,8 +9,8 @@ import langEn from "../image/svg/lang_en.svg";
 
 import iconValentia from "../image/svg/ICON_fg_valentia.svg";
 import iconCrozier from "../image/svg/ICON_fg_crozier.svg";
-import iconBolt from "../image/svg/ICON_fg_boltXl.svg";
-import iconHurler from "../image/svg/ICON_fg_hurler.svg";
+// import iconBolt from "../image/svg/ICON_fg_boltXl.svg";
+// import iconHurler from "../image/svg/ICON_fg_hurler.svg";
 
 import { Popover, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -22,31 +22,31 @@ const popUpNav = [
     mol: "(Fluroxypyr 100 g/l, Florasulam 2 g/l)",
     descriptionDe: "Einzigartig in Mais – Top in Getreide",
     descriptionEn: "Unique in corn - top in cereals",
-    href: "./agroform/valentia",
+    href: "https://agroform.de/valentia",
     icon: iconValentia,
   },
   {
     name: "Crozier",
-    description:
-      "Das Basisherbizid inKartoffeln und der Resistenzbrecher im Getreide",
+    descriptionDe: "Doppeltes potential für Ihr Feld",
+    descriptionEn: "Double potential for your field",
     mol: "(Prosulfocarb 800g/l)",
-    href: "/agroform/crozier",
+    href: "https://agroform.de/crozier",
     icon: iconCrozier,
   },
-  {
-    name: "BOLT XL",
-    description: "Das Top Azol für Getreide und Raps",
-    mol: "(Prothioconazol 250 g/l))",
-    href: "#",
-    icon: iconBolt,
-  },
-  {
-    name: "Hurler",
-    description: "Bewährt in Getreide und Grünland",
-    mol: "(Fluroxypyr 180 g/l)",
-    href: "#",
-    icon: iconHurler,
-  },
+  // {
+  //   name: "BOLT XL",
+  //   description: "Das Top Azol für Getreide und Raps",
+  //   mol: "(Prothioconazol 250 g/l))",
+  //   href: "#",
+  //   icon: iconBolt,
+  // },
+  // {
+  //   name: "Hurler",
+  //   description: "Bewährt in Getreide und Grünland",
+  //   mol: "(Fluroxypyr 180 g/l)",
+  //   href: "#",
+  //   icon: iconHurler,
+  // },
 ];
 
 function classNames(...classes) {
@@ -138,8 +138,13 @@ class Navbar extends React.Component {
                       leaveTo="opacity-0 translate-y-1"
                     >
                       <Popover.Panel className="absolute z-10 -ml-72 mt-3 transform w-screen max-w-md lg:max-w-3xl">
-                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                          <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                        <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                          <h3 className="m-4 text-md text-gray-500 lg-grid-cols-2">
+                            {this.props.lang === "de"
+                              ? "Unsere aktuellen Produkthighlights"
+                              : "Our current product highlights"}
+                          </h3>
+                          <div className="relative grid gap-6  px-4 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                             {popUpNav.map((item) => (
                               <a
                                 key={item.name}
@@ -161,7 +166,7 @@ class Navbar extends React.Component {
                                     {item.mol}
                                   </p>
                                   <p className="mt-1 text-sm text-gray-500">
-                                    {this.state.lang === "de"
+                                    {this.props.lang === "de"
                                       ? item.descriptionDe
                                       : item.descriptionEn}
                                   </p>
@@ -169,9 +174,14 @@ class Navbar extends React.Component {
                               </a>
                             ))}
                           </div>
+                          <h3 className="m-4 text-md text-gray-500 lg-grid-cols-2">
+                            {this.props.lang === "de"
+                              ? "Alle Produkte und Innovationen im Agrarbereich finden Sie auf:"
+                              : "All agricultural products and innovations you will find on:"}
+                          </h3>
                           <div className="p-5 bg-brown-dark hover:bg-brown-darker sm:p-8">
                             <a
-                              href="/agroform"
+                              href="https://agroform.de"
                               className="-m-3 p-3 flow-root rounded-md"
                             >
                               <div className="flex items-center">
@@ -318,17 +328,22 @@ class Navbar extends React.Component {
                     </Popover.Button>
                   </div>
                 </div>
+                <h3 className="m-4 text-md text-gray-500 lg-grid-cols-2">
+                            {this.props.lang === "de"
+                              ? "Alle Produkte und Innovationen im Agrarbereich finden Sie auf:"
+                              : "All agricultural products and innovations you will find on:"}
+                          </h3>
                 <div className="mt-6">
                   <div className="p-5 bg-brown-dark hover:bg-brown-darker sm:p-12">
                     <a
-                      href="/agroform"
+                      href="https://agroform.de"
                       className="-m-3 p-3 flow-root rounded-md"
                     >
-                        <img
-                          className="pb-2 h-10 mr-4 w-auto sm:h-10 inline-flex"
-                          src={agroformLogoWhite}
-                          alt="agroform"
-                        />
+                      <img
+                        className="pb-2 h-10 mr-4 w-auto sm:h-10 inline-flex"
+                        src={agroformLogoWhite}
+                        alt="agroform"
+                      />
                       <div className="flex items-center">
                         <div className="text-base font-medium text-white">
                           {this.props.lang === "de"
@@ -355,15 +370,17 @@ class Navbar extends React.Component {
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {this.props.lang === "de"
-                      ? "Warum formgroup?"
-                      : "Why formgroup?"}
+                      ? "Mission & Vision?"
+                      : "Mission & Vision"}
                   </a>
 
                   <a
                     href="/team"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
-                    Team
+                       {this.props.lang === "de"
+                      ? "Team & Regionen"
+                      : "Team & Regions"}
                   </a>
 
                   <a
