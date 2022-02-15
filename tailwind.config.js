@@ -3,9 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
-      border: '1px #fff solid',
-      margin: '100px',
-      padding: '100px',
     },
     extend: {
       fontFamily: {
@@ -60,5 +57,7 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    // ...
+  ],
 }

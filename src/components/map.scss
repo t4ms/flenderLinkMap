@@ -1,0 +1,44 @@
+
+  
+  
+  $primary: #070C08;
+  
+  .map-container {
+    padding: 3.2rem .8rem;
+    position: relative;
+    display: inline-block;
+    img {
+      width: 100%;
+
+    }
+    
+    .point {
+      cursor: pointer;
+      position: absolute;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-color:  $primary;
+      border-radius: 50%;
+      transition: all .3s ease;
+      will-change: transform, box-shadow;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 0 rgba($primary, 0.4);
+      animation: pulse 3s infinite;
+      &:hover {
+        animation: none;
+        transform:  translate(-50%, -50%) scale3D(1.35, 1.35 ,1);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+    }
+    .europe { top: 25%; left: 45%; background-image: url(../image/svg/formgroup_iconWhite.svg);background-repeat: no-repeat; background-color: #070C08;border: 1px solid #070C08; background-size: 100%; height: 4rem; width: 4rem;}
+    .romania { top: 28%; left: 52%; background-image: url(../image/svg/logo_colinsonia.svg); background-repeat: no-repeat;; background-color: #fff;border: 1px solid #070C08; background-size: 100%; height: 3rem; width: 3rem; }
+    .egypt { top: 40%; left: 53%; }
+    .singapur { top: 55%; left: 76%; }
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba($primary, 0.5); }
+    70% { box-shadow: 0 0 0 25px rgba($primary, 0); }
+    100% { box-shadow: 0 0 0 0 rgba($primary, 0); }
+  }
+  

@@ -1,9 +1,5 @@
 /* ./src/index.css */
 
-.helloThere {
-  color: blue;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

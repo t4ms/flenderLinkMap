@@ -240,7 +240,7 @@ class Navbar extends React.Component {
               {/* Language dropdown */}
               <Menu as="div" className="ml-3 relative">
                 <div>
-                  <Menu.Button className="bg-fgDefault-darker flex text-sm rounded-full">
+                  <Menu.Button className="bg-fgDefault-black flex text-sm rounded-full">
                     <span className="sr-only">Choose Language</span>
 
                     {this.props.lang === "de" ? (
