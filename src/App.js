@@ -5,7 +5,7 @@ import React from "react";
 import "./App.css";
 import Home from "./components/home";
 import team from "./components/team";
-import about from "./components/about";
+import imprint from "./components/imprint";
 import contact from "./components/contact";
 import { Switch, Route } from "react-router-dom";
 import Maintenance from "./components/maintenance";
@@ -43,7 +43,7 @@ export default class App extends React.Component {
           />
           <Route exact path="/team" component={team} selectedTab="team" />
           <Route exact path="/contact" component={contact} />
-          <Route exact path="/about" component={about} />
+          <Route exact path="/imprint" component={imprint} />
         </Switch>
       </>
     );

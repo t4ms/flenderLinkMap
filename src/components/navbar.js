@@ -13,7 +13,7 @@ import iconCrozier from "../image/svg/ICON_fg_crozier.svg";
 // import iconHurler from "../image/svg/ICON_fg_hurler.svg";
 
 import { Popover, Menu, Transition } from "@headlessui/react";
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const popUpNav = [
@@ -59,22 +59,28 @@ class Navbar extends React.Component {
     this.state = {};
   }
 
-  render() {
+  render(props) {
     return (
-      <Popover className="relative bg-transparent z-40">
+      <>
+      {/* Desktop ANSICHT --> */}
+
+      <Popover className={classNames(this.props.background, "relative z-40")}>
         <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
           <div>
             <a href="/" className="flex">
               <span className="sr-only">formgroup</span>
               <img
                 className="pb-2 h-8 w-auto sm:h-10"
-                src={formgroupLogoWhite}
+                src={this.props.text === "black" ? formgroupLogoBlack : formgroupLogoWhite}
                 alt="formgroups"
               />
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-fgDefault-light">
+            <Popover.Button className={classNames(this.props.text === "black" ?
+            "text-fgDefault-black hover:text-white hover:bg-fgDefault-black focus:ring-fgDefault-black" :
+            "text-white hover:text-fgDefault-black hover:bg-white focus:ring-white",
+             "focus:outline-none focus:ring-1 focus:ring-inset rounded-md p-2 inline-flex items-center justify-center")}>
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -85,7 +91,10 @@ class Navbar extends React.Component {
 
               <a
                 href="/home"
-                className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white"
+                className={classNames(this.props.text==="black"
+                ? "text-fgDefault-black hover:border-fgDefault-black focus:border-fgDefault-black"
+                : "text-white hover:border-white focus:border-white" 
+                , "text-base font-medium border-transparent border-b")}
               >
                 {this.props.lang === "de"
                   ? "Mission & Vision"
@@ -96,7 +105,10 @@ class Navbar extends React.Component {
 
               <a
                 href="/team"
-                className="text-base font-medium text-white border-transparent border-b hover:border-white focus:border-white"
+                className={classNames(this.props.text==="black"
+                ? "text-fgDefault-black hover:border-fgDefault-black focus:border-fgDefault-black"
+                : "text-white hover:border-white focus:border-white" 
+                , "text-base font-medium border-transparent border-b")}
               >
                 {this.props.lang === "de"
                   ? "Team & Regionen"
@@ -109,9 +121,10 @@ class Navbar extends React.Component {
                 {({ open }) => (
                   <>
                     <Popover.Button
-                      className={classNames(
-                        open ? "text-white" : "text-white",
-                        "pb-2 group inline-flex items-center text-base font-medium border-transparent border-b hover:border-white focus:border-white"
+                      className={classNames(this.props.text==="black"
+                      ? "text-fgDefault-black hover:border-fgDefault-black"
+                      : "text-white hover:border-white"
+                      , "pb-2 group inline-flex items-center text-base font-medium border-transparent border-b"
                       )}
                     >
                       <span>
@@ -121,8 +134,8 @@ class Navbar extends React.Component {
                       </span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? "text-gray-600" : "text-gray-400",
-                          "ml-2 h-5 w-5 group-hover:text-gray-500"
+                          this.props.text==="black" ? "text-fgDefault-black" : "text-white",
+                          "ml-2 h-5 w-5"
                         )}
                         aria-hidden="true"
                       />
@@ -216,13 +229,13 @@ class Navbar extends React.Component {
               </Popover>
             </Popover.Group>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button
+              {/* <button
                 type="button"
                 className="bg-fgDefault-darker p-1 rounded-full text-fgDefault-dark hover:text-white"
               >
                 <span className="sr-only">View notifications</span>
                 <BellIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
+              </button> */}
 
               {/* Language dropdown */}
               <Menu as="div" className="ml-3 relative">
@@ -298,6 +311,8 @@ class Navbar extends React.Component {
           </div>
         </div>
 
+        {/* MOBILE ANSICHT --> */}
+
         <Transition
           as={Fragment}
           enter="duration-200 ease-out"
@@ -322,7 +337,7 @@ class Navbar extends React.Component {
                     />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-dgDefault-light">
+                    <Popover.Button className={classNames(this.props.text,"rounded-md p-2 inline-flex items-center justify-center hover:text-white hover:bg-fgDefault-black")}>
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -437,6 +452,7 @@ class Navbar extends React.Component {
           </Popover.Panel>
         </Transition>
       </Popover>
+      </>
     );
   }
 }

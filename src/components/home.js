@@ -24,7 +24,7 @@ export default class home extends React.Component {
   {
   return (
     <div>
-<Navbar lang={this.props.lang} handleLangHome={this.props.handleLang}/>
+<Navbar lang={this.props.lang} background={"bg-transparent"} text={"text-fgDefault-black"} handleLangHome={this.props.handleLang}/>
 
 <Header lang={this.props.lang}/>
 
