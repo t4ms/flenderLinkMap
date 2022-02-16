@@ -57,7 +57,7 @@ export default function formgroupTeam() {
                   <div className="flex-1 space-y-1">
                     <div className="flex items-center justify-between">
                       <h3 className="text-md font-semibold text-fgDefault-black">{item.name}</h3>
-                    <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-fgDefault-black bg-opacity-50 text-white">
+                    <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-fgDefault-black bg-opacity-50 text-white">
                     {item.position}
                         </span>
                     </div>

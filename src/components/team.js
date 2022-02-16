@@ -67,7 +67,7 @@ export default function Team(props) {
       {/* OVERLAY */}
       {showModal ? (
         <>
-          <div className=" sm:mt-0 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none overflow-auto">
+          <div className="justify-center sm:top-4 md:top-12 lg:top-12 flex overflow-x-auto overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="mt-24 lg:mt-0 md:mt-0 relative w-full my-6 mx-2 md:mx-32 lg:mx-64">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
