@@ -10,7 +10,7 @@ export default function headerformgroup(props) {
   return (
     <>
       <header class="-mt-24 relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-        <div class="h-full relative z-30 text-2xl w-screen text-white bg-white bg-opacity-80 rounded-xl">
+        <div class="h-full relative z-30 text-2xl w-screen text-white bg-white bg-opacity-75 rounded-xl">
           <div className="mt-24 overflow-hidden ">
             <div className="max-w-7xl h-10xl mx-auto">
               <div className="pb-8 bg- sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 lg:h-screen lg:flex lg:flex-wrap lg:content-center">
@@ -48,7 +48,7 @@ export default function headerformgroup(props) {
             </div>
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:flex lg:flex-wrap lg:content-center sm:content-center">
               <img
-                className="w-full h-96"
+                className="w-full h-72 lg:h-96 md:h-72 sm:h-48"
                 src={FormgroupAnimation}
                 alt=""
               />

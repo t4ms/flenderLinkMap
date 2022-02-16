@@ -4,7 +4,7 @@ import React from "react";
 
 import "./App.css";
 import Home from "./components/home";
-import team from "./components/team";
+import Team from "./components/team";
 import imprint from "./components/imprint";
 import contact from "./components/contact";
 import { Switch, Route } from "react-router-dom";
@@ -16,7 +16,7 @@ export default class App extends React.Component {
     this.getLang = this.getLang.bind(this);
     this.state = {
       lang: "de",
-      site: "index"
+      site: "index",
     };
   }
   getLang(language) {
@@ -41,7 +41,18 @@ export default class App extends React.Component {
               />
             )}
           />
-          <Route exact path="/team" component={team} selectedTab="team" />
+          <Route
+            exact
+            path="/team"
+            selectedTab="team"
+            render={(props) => (
+              <Team
+                {...props}
+                lang={this.state.lang}
+                handleLang={this.getLang}
+              />
+            )}
+          />
           <Route exact path="/contact" component={contact} />
           <Route exact path="/imprint" component={imprint} />
         </Switch>

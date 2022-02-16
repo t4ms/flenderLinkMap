@@ -31,7 +31,7 @@ export default function contentfgidenity() {
         <h2 className="inline-flex items-center px-3 py-0.5 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
           formgroup Identity
         </h2>
-        <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl uppercase">
+        <p className="mt-2 text-3xl font-semibold text-gray-900 tracking-tight sm:text-4xl uppercase">
           We simplify market access
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">

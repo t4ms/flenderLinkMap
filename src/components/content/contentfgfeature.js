@@ -42,7 +42,7 @@ export default function contentfgfeature() {
           <h2 className="inline-flex items-center px-3 py-0.5 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
           formgroup Features
         </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
             UNSERE LEISTUNGSBEREICHE
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
