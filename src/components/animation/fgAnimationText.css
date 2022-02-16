@@ -2,7 +2,7 @@
 
 
 .containerAnimation {
-  color:#fff;
+  color:#070C08;
   text-transform: uppercase;
   width:100%;
   bottom:45%;
@@ -27,13 +27,13 @@
 }
 
 .flip div div {
-  background:#6bbaa6;
+  background:#676767;
 }
 .flip div:first-child div {
-  background:#417886;
+  background:#343434;
 }
 .flip div:last-child div {
-  background:#a7d4b5;
+  background:#111111;
 }
 
 @keyframes show {
