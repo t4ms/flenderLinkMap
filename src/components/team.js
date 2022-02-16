@@ -67,8 +67,8 @@ export default function Team(props) {
       {/* OVERLAY */}
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-full my-6 mx-2 md:mx-32 lg:mx-64">
+          <div className=" sm:mt-0 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none overflow-auto">
+            <div className="mt-24 lg:mt-0 md:mt-0 relative w-full my-6 mx-2 md:mx-32 lg:mx-64">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -90,6 +90,14 @@ export default function Team(props) {
                 {modal==="formgroupTeam" ? <FormgroupTeam /> : ""}
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-fgDefault-black rounded-b">
+                <button
+                    className="p-1 text-fgDefault-black ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold"
+                    onClick={() => setShowModal(false) & setModal("")}
+                  >
+                    <span className="text-fgDefault-black block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
