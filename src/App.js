@@ -5,8 +5,8 @@ import React from "react";
 import "./App.css";
 import Home from "./components/home";
 import Team from "./components/team";
-import imprint from "./components/imprint";
-import contact from "./components/contact";
+import Imprint from "./components/imprint";
+import Contact from "./components/contact";
 import { Switch, Route } from "react-router-dom";
 import Maintenance from "./components/maintenance";
 
@@ -53,8 +53,30 @@ export default class App extends React.Component {
               />
             )}
           />
-          <Route exact path="/contact" component={contact} />
-          <Route exact path="/imprint" component={imprint} />
+          <Route
+            exact
+            path="/contact"
+            selectedTab="contact"
+            render={(props) => (
+              <Contact
+                {...props}
+                lang={this.state.lang}
+                handleLang={this.getLang}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/imprint"
+            selectedTab="imprint"
+            render={(props) => (
+              <Imprint
+                {...props}
+                lang={this.state.lang}
+                handleLang={this.getLang}
+              />
+            )}
+          />
         </Switch>
       </>
     );

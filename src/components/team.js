@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 
+import Footer from './footer'
+
 import Navbar from "./navbar";
 
 import formgroupMap from "./../image/svg/formgroupMapBlack.svg";
@@ -9,6 +11,9 @@ import formgroupIcon from './../image/svg/formgroupLogoBlack.svg'
 import colinsoniaLogo from './../image/png/logoColinsonia.png'
 
 import FormgroupTeam from "./contentTeam/formgroupTeam";
+import ColinsoniaTeam from "./contentTeam/colinsoniaTeam";
+import RegionMEATeam from "./contentTeam/regionMEATeam";
+import GlobalExpertTeam from "./contentTeam/globalExpertTeam";
 
 
 import "./map.scss";
@@ -55,11 +60,19 @@ export default function Team(props) {
               ></button>
               <button
                 className="point romania tippy"
-                title="Argentina"
+                title="colinsonia"
                 onClick={() => setShowModal(true) & setModal("colinsoniaTeam")}
               ></button>
-              <div className="point egypt tippy" title="Colombia"></div>
-              <div className="point singapur tippy" title="Panamá"></div>
+              <button
+                className="point egypt tippy"
+                title="Region MEA"
+                onClick={() => setShowModal(true) & setModal("regionMEATeam")}
+              ></button>
+              <button
+                className="point singapur tippy"
+                title="Gobal Experts Asian Pazific"
+                onClick={() => setShowModal(true) & setModal("globalexpertTeam")}
+              ></button>
             </div>
           </div>
         </div>
@@ -67,14 +80,16 @@ export default function Team(props) {
       {/* OVERLAY */}
       {showModal ? (
         <>
-          <div className="justify-center sm:top-4 md:top-12 lg:top-12 flex overflow-x-auto overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="mt-24 lg:mt-0 md:mt-0 relative w-full my-6 mx-2 md:mx-32 lg:mx-64">
+          <div className="justify-center flex overflow-x-auto overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="mt-4 lg:mt-12 md:mt-12 relative w-full mx-2 md:mx-32 lg:mx-64">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-fgDefault-black rounded-t">
                 {modal==="formgroupTeam" ? <img className="w-64" alt="formgroup logo" src={formgroupIcon} />
                 : modal==="colinsoniaTeam" ? <img className="w-48" alt="colinsonia Logo" src={colinsoniaLogo} />
+                : modal==="regionMEATeam" ? <h3 className="text-3xl font-semibold">Region MEA</h3>
+                : modal==="globalexpertTeam" ? <h3 className="text-3xl font-semibold">Formgroup Global Expert</h3>
                 : <h3 className="text-3xl font-semibold">{modal}</h3>}
                   
                   <button
@@ -87,7 +102,11 @@ export default function Team(props) {
                   </button>
                 </div>
                 {/*body*/}
-                {modal==="formgroupTeam" ? <FormgroupTeam /> : ""}
+                {modal==="formgroupTeam" ? <FormgroupTeam /> 
+                : modal==="colinsoniaTeam" ?  <ColinsoniaTeam />
+                : modal==="regionMEATeam" ?  <RegionMEATeam />
+                : modal==="globalexpertTeam" ?  <GlobalExpertTeam />
+                : ""}
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-fgDefault-black rounded-b">
                 <button
@@ -105,6 +124,8 @@ export default function Team(props) {
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
+
+      <Footer />
     </>
   );
 }

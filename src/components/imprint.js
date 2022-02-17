@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 export default class imprint extends Component {
   constructor(props) {
@@ -18,16 +19,6 @@ export default class imprint extends Component {
         />
         <div className="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
           <div className="max-w-max lg:max-w-7xl mx-auto">
-            <div className="relative z-10 mb-8 md:mb-2 md:px-6">
-              <div className="text-base max-w-prose lg:max-w-none">
-                <h2 className="leading-6 text-gray-500 font-semibold tracking-wide uppercase bg-white">
-                  FORMGROUP
-                </h2>
-                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-fgDefault-black sm:text-3xl bg-white">
-                  Impressum
-                </p>
-              </div>
-            </div>
             <div className="relative">
               <svg
                 className="hidden md:block absolute top-0 right-0 -mt-20 -mr-20"
@@ -96,6 +87,17 @@ export default class imprint extends Component {
                 />
               </svg>
               <div className="relative md:bg-white md:p-6">
+                <div className="relative z-10 mb-12">
+                  <div className="text-base max-w-prose lg:max-w-none">
+                    <h2 className="inline-flex items-center px-3 py-0.5 my-4 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
+                      FORMGROUP
+                    </h2>
+
+                    <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-fgDefault-black sm:text-3xl uppercase">
+                      Impressum
+                    </p>
+                  </div>
+                </div>
                 <div className="lg:grid lg:grid-cols-2 lg:gap-6">
                   <div className="prose prose-indigo prose-lg text-fgDefault-black lg:max-w-none">
                     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
@@ -149,6 +151,7 @@ export default class imprint extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   }
