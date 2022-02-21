@@ -9,7 +9,7 @@ import Icon4 from '../../image/svg/ICON_fg_light_4.svg'
 
 const features = [
   {
-    name: '[Vertrieb & Change]',
+    name: '[Vertrieb & Strategie]',
     description:
       'Vertriebsstrategie – Preis- und Konditionssysteme. Profitabilität durch Veränderung',
     icon: Icon1,
