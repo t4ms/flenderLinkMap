@@ -27,7 +27,7 @@ const popUpNav = [
   },
   {
     name: "Crozier",
-    descriptionDe: "Doppeltes potential für Ihr Feld",
+    descriptionDe: "Doppeltes Potential für Ihr Feld",
     descriptionEn: "Double potential for your field",
     mol: "(Prosulfocarb 800g/l)",
     href: "https://agroform.de/crozier",
@@ -231,7 +231,7 @@ class Navbar extends React.Component {
                                 </div>
                                 <p className="mt-1 text-sm text-white">
                                   {this.props.lang === "de"
-                                    ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte, Lösungen."
+                                    ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte und Lösungen."
                                     : "Find, compare and learn about the innovative agricultural products, solutions."}
                                 </p>
                               </a>
@@ -396,7 +396,7 @@ class Navbar extends React.Component {
                         </div>
                         <p className="mt-1 text-sm text-white">
                           {this.props.lang === "de"
-                            ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte, Lösungen."
+                            ? "Finden, vergleichen und informieren Sie sich über unsere innovativen Agrarprodukte und Lösungen."
                             : "Find, compare and learn about the innovative agricultural products, solutions."}
                         </p>
                       </a>

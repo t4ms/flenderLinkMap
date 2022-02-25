@@ -10,7 +10,7 @@ const people = [
     id: 1,
     name: "Hugo Schweers",
     imageUrl: hugoSchweers,
-    description: "[35+ years Experience in AG Business]",
+    description: "[35+ years Experience in AG Business ex Aventis, Nufarm, Agravis (Vorstand-Agrar) ]",
     position: "Founder & CEO",
   },
   {
@@ -42,7 +42,7 @@ export default function formgroupTeam() {
     <>
       <div className="relative p-6 flex-auto">
         <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-          Die vier Experten der formgroup Europe.
+          Die vier Experten der formgroup Europa.
         </p>
         <div>
           <ul className="w-full divide-y divide-gray-200">

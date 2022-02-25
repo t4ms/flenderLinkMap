@@ -32,7 +32,7 @@ export default function contentfgidenity() {
           formgroup Identity
         </h2>
         <p className="mt-2 text-3xl font-semibold text-gray-900 tracking-tight sm:text-4xl uppercase">
-          We simplify market access
+          Wir sichern Ihren Marktzugang
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
           Wir bringen Kundenwünsche und Produktinnovationen zusammen. Als Ihr

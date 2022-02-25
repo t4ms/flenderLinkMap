@@ -9,27 +9,33 @@ import Icon4 from '../../image/svg/ICON_fg_light_4.svg'
 
 const features = [
   {
-    name: '[Vertrieb & Strategie]',
+    name: '[Strategie & Change]',
     description:
-      'Vertriebsstrategie – Preis- und Konditionssysteme. Profitabilität durch Veränderung',
+      'Marktanalysen, Chancen & Risiken, Profitabilität durch Veränderung, 5-Jahres-Pläne.',
+    icon: Icon1,
+  },
+  {
+    name: '[Vertrieb & Kunden]',
+    description:
+      'Vertriebsstrategie – Preis- und Konditionssysteme. Kundenlisten und Beziehungen nutzen.',
     icon: Icon1,
   },
   {
     name: '[Produkte & Innovationen]',
     description:
-      'Neuprodukt Akquise – Von Innovationsprodukte zu Generika. Mit uns zum profitablen Wachstum.',
+      'Ob Innovationsprodukte oder Generika, mit uns setzen Sie auf profitables Wachstum.',
     icon: Icon2,
   },
   {
     name: '[Einkauf & Logistik]',
     description:
-      'Analysecheck und Optimierungswege',
+      'Analysecheck und Optimierungswege.',
     icon: Icon3,
   },
   {
     name: '[Brand & Marketing]',
     description:
-      ' Marketingunterstützung – Nachhaltige und gezielte Werbeaktivitäten mit passenden, modernen Wegen',
+      ' Marketingunterstützung – Nachhaltige und gezielte Produktpositionierung. 4 P-Modell - traditionelle und moderne Methoden.',
     icon: Icon4,
   },
 ]
@@ -40,13 +46,13 @@ export default function contentfgfeature() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
           <h2 className="inline-flex items-center px-3 py-0.5 my-4 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
-          formgroup Features
+          formgroup Angebote
         </h2>
             <p className="mt-2 text-3xl leading-8 font-semibold tracking-tight text-gray-900 sm:text-4xl">
             UNSERE LEISTUNGSBEREICHE
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Ziel ist es Abläufe effizient zu gestalten, Marktpotentiale zu erkennen und damit Margen zu steigern.
+            Ziel ist es, Marktpotentiale zu erkennen, Abläufe effizient zu gestalten und damit Margen zu steigern.
             </p>
           </div>
   
