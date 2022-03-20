@@ -98,7 +98,7 @@ class Navbar extends React.Component {
                 {/* Nav 1 - Warum formgroup */}
 
                 <a
-                  href="/home"
+                  href="/"
                   className={classNames(
                     this.props.text === "black"
                       ? "text-fgDefault-black hover:border-fgDefault-black focus:border-fgDefault-black"

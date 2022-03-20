@@ -8,7 +8,7 @@ import Team from "./components/team";
 import Imprint from "./components/imprint";
 import Contact from "./components/contact";
 import { Switch, Route } from "react-router-dom";
-import Maintenance from "./components/maintenance";
+// import Maintenance from "./components/maintenance";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -29,10 +29,10 @@ export default class App extends React.Component {
     return (
       <>
         <Switch>
-          <Route exact path="/" component={Maintenance} />
+          {/* <Route exact path="/" component={Maintenance} /> */}
           <Route
             exact
-            path="/home"
+            path="/"
             render={(props) => (
               <Home
                 {...props}

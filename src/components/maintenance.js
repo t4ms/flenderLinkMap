@@ -22,7 +22,7 @@ const maintenance = (props) => {
     >
       Contact
     </a>
-    <a style={{color: "#1c1c1c"}} href="/home">***</a>
+    <a style={{color: "#1c1c1c"}} href="/">***</a>
     <br></br>
     
   </header>
