@@ -26,8 +26,8 @@ export default class home extends React.Component {
 
         <Header lang={this.props.lang} />
 
-        <Identity />
-        <Feature />
+        <Identity lang={this.props.lang}/>
+        <Feature lang={this.props.lang}/>
 
         <Footer lang={this.props.lang} handleLangHome={this.props.handleLang} />
       </div>

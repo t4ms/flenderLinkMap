@@ -34,15 +34,17 @@ export default function Team(props) {
           <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="mb-4 inline-flex items-center px-3 py-0.5 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
-                formgroup Network
+              {props.lang === "de" ? "formgroup Netzwerk": "formgroup Network"}
               </h2>
               <p className="mt-1 text-4xl font-semibold text-fgDefault-darker sm:text-2xl sm:tracking-tight lg:text-4xl">
-                Mit unserem Netzwerk zum nachhaltigen Wachstum.
+              {props.lang === "de" ? "Mit unserem Netzwerk zum nachhaltigen Wachstum.": "With our network to sustainable growth."}
               </p>
               <p className="max-w-xl mt-5 mx-auto text-xl text-fgDefault-black">
-                Unsere Netwerk besteht aus branchen Spezialisten und fachlichen
-                Experten. <br />
-                Wir sind ein offenes Netzwerk - werde Teil davon.
+              {props.lang === "de" ? "Unsere Netwerk besteht aus branchen Spezialisten und fachlichen Experten.": "Our network consists of industry specialists and technical experts."}
+              <br/>
+              {props.lang === "de" ? "Wir sind ein offenes Netzwerk - werde Teil davon.": "We are an open network - become part of it."}
+                 
+      
               </p>
             </div>
           </div>
@@ -102,10 +104,10 @@ export default function Team(props) {
                   </button>
                 </div>
                 {/*body*/}
-                {modal==="formgroupTeam" ? <FormgroupTeam /> 
-                : modal==="colinsoniaTeam" ?  <ColinsoniaTeam />
-                : modal==="regionMEATeam" ?  <RegionMEATeam />
-                : modal==="globalexpertTeam" ?  <GlobalExpertTeam />
+                {modal==="formgroupTeam" ? <FormgroupTeam lang={props.lang}/> 
+                : modal==="colinsoniaTeam" ?  <ColinsoniaTeam lang={props.lang}/>
+                : modal==="regionMEATeam" ?  <RegionMEATeam lang={props.lang}/>
+                : modal==="globalexpertTeam" ?  <GlobalExpertTeam lang={props.lang}/>
                 : ""}
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-fgDefault-black rounded-b">

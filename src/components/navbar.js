@@ -4,15 +4,15 @@ import React, { Fragment } from "react";
 import formgroupLogoWhite from "../image/svg/formgroupLogoWhite.svg";
 import formgroupLogoBlack from "../image/svg/formgroupLogoBlack.svg";
 import agroformLogoWhite from "../image/svg/agroform_logo_white.svg";
-// import langDe from "../image/svg/lang_de.svg";
-// import langEn from "../image/svg/lang_en.svg";
+import langDe from "../image/svg/lang_de.svg";
+import langEn from "../image/svg/lang_en.svg";
 
 import iconValentia from "../image/svg/ICON_fg_valentia.svg";
 import iconCrozier from "../image/svg/ICON_fg_crozier.svg";
 // import iconBolt from "../image/svg/ICON_fg_boltXl.svg";
 // import iconHurler from "../image/svg/ICON_fg_hurler.svg";
 
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
@@ -246,14 +246,7 @@ class Navbar extends React.Component {
 
               {/* Language/Bell dropdown */}
 
-              {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button
-                type="button"
-                className="bg-fgDefault-darker p-1 rounded-full text-fgDefault-dark hover:text-white"
-              >
-                <span className="sr-only">View notifications</span>
-                <BellIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               <Menu as="div" className="ml-3 relative">
                 <div>
@@ -325,7 +318,7 @@ class Navbar extends React.Component {
                   </Menu.Items>
                 </Transition>
               </Menu>
-            </div> */}
+            </div>
             </div>
           </div>
 
@@ -437,7 +430,7 @@ class Navbar extends React.Component {
                     </a>
                   </div>
                   {/* Language dropdown */}
-                  {/* <div className="mt-12 xl:mt-0">
+                  <div className="mt-12 xl:mt-0">
                   <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
                     {this.props.lang === "de" ? "Sprache" : "Language"}
                   </h3>
@@ -471,7 +464,7 @@ class Navbar extends React.Component {
                       </button>
                     </div>
                   </div>
-                </div> */}
+                </div>
 
                 </div>
               </div>

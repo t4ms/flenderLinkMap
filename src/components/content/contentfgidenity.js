@@ -6,25 +6,29 @@ import IconKey3 from "../../image/svg/formgroupTiangel.svg";
 
 const keys = [
   {
-    name: "WAS IST FORMGROUP.",
-    description:
-      "Formgroup ist ein offenes Netzwerk aus Experten mit branchen- und fach-spezifischem Know-How und regionalen & internationalen Partnern.",
+    nameDe: "WAS IST FORMGROUP.",
+    nameEn: "WHAT IS FORMGROUP.",
+    descriptionDe: "Formgroup ist ein offenes Netzwerk aus Experten mit branchen- und fach-spezifischem Know-How und regionalen & internationalen Partnern.",
+    descriptionEn: "Formgroup is an open network of experts with sector- and subject-specific know-how and regional & international partners.",
     icon: IconKey1,
   },
   {
-    name: "WAS MACHT FORMGROUP.",
-    description:
-      "Die formgroup Experten unterstützen Produzenten und Distributoren bei der Umsetzung der  Strategie mit modernen Marketingmaßnahmen.",
+    nameDe: "WAS MACHT FORMGROUP.",
+    nameEn: "WHAT DOES FORMGROUP.",
+    descriptionDe: "Die formgroup Experten unterstützen Produzenten und Distributoren bei der Umsetzung der Strategie mit modernen Marketingmaßnahmen.",
+    descriptionEn: "The formgroup experts support producers and distributors via implementing the trusted strategy with modern marketing activities.",
     icon: IconKey2,
   },
   {
-    name: "WARUM FORMGROUP.",
-    description: "Know-How + Erfahrung + Netzwerk = Marktzugang",
+    nameDe: "WARUM FORMGROUP.",
+    nameEn: "WHY FORMGROUP.",
+    descriptionDe: "Unsere simple Gleichung: Know-How + Erfahrung + Netzwerk = Marktzugang",
+    descriptionEn: "Our simple equation: know-how + experience + network = market access",
     icon: IconKey3,
   },
 ];
 
-export default function contentfgidenity() {
+export default function contentfgidenity(props) {
   return (
     <div className="relative bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -32,11 +36,14 @@ export default function contentfgidenity() {
           formgroup Identity
         </h2>
         <p className="mt-2 text-3xl font-semibold text-gray-900 tracking-tight sm:text-4xl uppercase">
-          Wir sichern Ihren Marktzugang
+        {props.lang==="de" ?
+         'Wir sichern Ihren Marktzugang' :
+         'We secure your market access'}
         </p>
         <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-          Wir bringen Kundenwünsche und Produktinnovationen zusammen. Als Ihr
-          Kooperationspartner im Markt sorgen wir für Wachstum.
+        {props.lang==="de" ?
+         'Wir bringen Kundenwünsche und Produktinnovationen zusammen. Als Ihr Kooperationspartner im Markt sorgen wir für Wachstum.' :
+         'Connecting customer wishes and product innovations is our claim. We ensure growth as your cooperation partner in the market.'}
         </p>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -54,10 +61,11 @@ export default function contentfgidenity() {
                       </span>
                     </div>
                     <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                      {key.name}
+                    {props.lang==="de" ? key.nameDe : key.nameEn}
+         
                     </h3>
                     <p className="mt-5 text-base text-gray-500">
-                      {key.description}
+                    {props.lang==="de" ? key.descriptionDe : key.descriptionEn}
                     </p>
                   </div>
                 </div>

@@ -10,39 +10,45 @@ const people = [
     id: 1,
     name: "Elvira Griot",
     imageUrl: elviraGriot,
-    description: "[25 years in agribusiness; Summit Agro; Nufarm]",
+    descriptionDe: "[25 Jahre in agribusiness; Summit Agro; Nufarm]",
+    descriptionEn: "[25 years in agribusiness; Summit Agro; Nufarm]",
     position: "Commercial & Admin",
   },
   {
     id: 2,
     name: "Zamfira Iosif",
     imageUrl: zamfiraIosif,
-    description: "[28 years in agribusiness; Regi Committee at MOA; Summit Agro ; Nufarm]",
+    descriptionDe: "[28 Jahre in agribusiness; Regi Committee at MOA; Summit Agro ; Nufarm]",
+    descriptionEn: "[28 years in agribusiness; Regi Committee at MOA; Summit Agro ; Nufarm]",
     position: "Development & Marketing",
   },
   {
     id: 3,
     name: "Daliana Ast",
     imageUrl: dalinaAst,
-    description: "[26 years in agribusiness; Oltchim; Nufarm]",
+    descriptionDe: "[26 Jahre in agribusiness; Oltchim; Nufarm]",
+    descriptionEn: "[26 years in agribusiness; Oltchim; Nufarm]",
     position: "National Sales Manager",
   },
   {
     id: 4,
     name: "Irina Mitu",
     imageUrl: irinaMitu,
-    description: "[26 years in agribusiness business; Oltchim; Agrimatco; Nufarm]",
+    descriptionDe: "[26 Jahre in agribusiness business; Oltchim; Agrimatco; Nufarm]",
+    descriptionEn: "[26 years in agribusiness business; Oltchim; Agrimatco; Nufarm]",
     position: "Sales Manager",
   },
 
 ];
 
-export default function formgroupTeam() {
+export default function formgroupTeam(props) {
   return (
     <>
       <div className="relative p-6 flex-auto">
         <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-        COLINSONIA Advice ist das neue gemeinsame Start-up-Projekt, das von einem soliden Expertenteam aufgebaut wurde.
+        {props.lang === "de" ? "COLINSONIA Advice ist das neue gemeinsame Start-up-Projekt, das von einem soliden Expertenteam aufgebaut wurde." :
+         "COLINSONIA Advice is a new joint start-up project built by a solid team of experts."}
+        
         </p>
         <div>
           <ul className="w-full divide-y divide-gray-200">
@@ -62,7 +68,7 @@ export default function formgroupTeam() {
                         </span>
                     </div>
                     <p className="text-sm text-fgDefault-dark">
-                    {item.description}
+                    {props.lang === "de" ? item.descriptionDe : item.descriptionEn}
                     </p>
                   </div>
                 </div>

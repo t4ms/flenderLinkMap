@@ -7,39 +7,43 @@ const people = [
     id: 1,
     name: "Ali Nenai",
     imageUrl: formgroupExpert,
-    description: "[25+ years Experience in AG Business in MNCs]",
+    descriptionDe: "[25+ Jahre Erfahrung in AG Business in MNCs]",
+    descriptionEn: "[25+ years Experience in AG Business in MNCs]",
     position: "Managing Director",
   },
   {
     id: 2,
     name: "Mohamed Adel",
     imageUrl: formgroupExpert,
-    description: "[15+ years Experience in Regulatory in MNCs]",
+    descriptionDe: "[15+ Jahre Erfahrung in Regulatory in MNCs]",
+    descriptionEn: "[15+ years Experience in Regulatory in MNCs]",
     position: "Regulatory Manager",
   },
   {
     id: 3,
     name: "Maiar Iraqi",
     imageUrl: formgroupExpert,
-    description: "[3+ years Experience in AG business MNCs]",
+    descriptionDe: "[3+ yJahre Erfahrungin AG business MNCs]",
+    descriptionEn: "[3+ years Experience in AG business MNCs]",
     position: "Admin & Marketing Support",
   },
   {
     id: 4,
     name: "Ahmed Emam",
     imageUrl: formgroupExpert,
-    description: "[10+ years experience in AG industry in MNCs]",
+    descriptionDe: "[10+ Jahre Erfahrung in AG industry in MNCs]",
+    descriptionEn: "[10+ years experience in AG industry in MNCs]",
     position: "Sales Manager",
   },
 
 ];
 
-export default function formgroupTeam() {
+export default function formgroupTeam(props) {
   return (
     <>
       <div className="relative p-6 flex-auto">
         <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-        Durch unser Expertenteam in der Middle-East-Africa Region können wir regionale Marktbedingungen einschätzen und wissen diese zu nutzen.
+        {props.lang === "de" ? "Durch unser Expertenteam in der Middle-East-Africa Region können wir regionale Marktbedingungen einschätzen und wissen diese zu nutzen." : "Through our team of experts in the Middle-East Africa region, we can assess regional market conditions and know how to exploit them."}
         </p>
         <div>
           <ul className="w-full divide-y divide-gray-200">
@@ -59,7 +63,7 @@ export default function formgroupTeam() {
                         </span>
                     </div>
                     <p className="text-sm text-fgDefault-dark">
-                    {item.description}
+                    {props.lang === "de" ? item.descriptionDe : item.descriptionEn}
                     </p>
                   </div>
                 </div>
