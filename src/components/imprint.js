@@ -90,17 +90,18 @@ export default class imprint extends Component {
                 <div className="relative z-10 mb-12">
                   <div className="text-base max-w-prose lg:max-w-none">
                     <h2 className="inline-flex items-center px-3 py-0.5 my-4 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
-                      FORMGROUP
+                      formgroup
                     </h2>
 
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-fgDefault-black sm:text-3xl uppercase">
-                      Impressum
+                    {this.props.lang === "de" ? "Impressum" : "Imprint"}
                     </p>
                   </div>
                 </div>
                 <div className="lg:grid lg:grid-cols-2 lg:gap-6">
                   <div className="prose prose-indigo prose-lg text-fgDefault-black lg:max-w-none">
-                    <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+                    <h2>
+                    {this.props.lang === "de" ? "Angaben gem&auml;&szlig; &sect; 5 TMG" : "Information pursuant to section 5 of the German Telemedia Act (TMG)"}</h2>
                     <br />
                     <h2 className="font-bold">formgroup</h2>
                     <p>
@@ -111,12 +112,14 @@ export default class imprint extends Component {
                       46459 Rees
                     </p>
                     <br />
-                    <h2>Kontakt</h2>
+                    <h2>{this.props.lang === "de" ? "Kontakt" : "Contact"}</h2>
                     <p>E-Mail: info@formgroup.io</p>
                   </div>
                   <div className="mt-6 prose prose-indigo prose-lg text-fgDefault-black lg:mt-0">
-                    <h2 className="font-bold">EU-Streitschlichtung</h2>
+                    <h2 className="font-bold">
+                    {this.props.lang === "de" ? "EU-Streitschlichtung" : "EU Dispute Settlement"}</h2>
                     <p>
+                    {this.props.lang === "de" ? "Impressum" : "Imprint"}
                       Die Europ&auml;ische Kommission stellt eine Plattform zur
                       Online-Streitbeilegung (OS) bereit:{" "}
                       <a
@@ -126,21 +129,20 @@ export default class imprint extends Component {
                       >
                         https://ec.europa.eu/consumers/odr/
                       </a>
-                      .<br /> Unsere E-Mail-Adresse finden Sie oben im
-                      Impressum.
+                      .<br /> 
+                      {this.props.lang === "de" ? "Unsere E-Mail-Adresse finden Sie oben im Impressum." : "You can find our e-mail address in the imprint above."}
                     </p>
                     <br />
                     <h2 className="font-bold">
-                      Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle
+                    {this.props.lang === "de" ? "Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle" : "Consumer dispute resolution/universal conciliation body"}
+                      
                     </h2>
                     <p>
-                      Wir sind nicht bereit oder verpflichtet, an
-                      Streitbeilegungsverfahren vor einer
-                      Verbraucherschlichtungsstelle teilzunehmen.
+                    {this.props.lang === "de" ? "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen." : "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."} 
                     </p>
 
                     <p>
-                      Quelle:{" "}
+                    {this.props.lang === "de" ? "Quelle" : "Source"}:{" "}
                       <a href="https://www.e-recht24.de/impressum-generator.html">
                         https://www.e-recht24.de/impressum-generator.html
                       </a>

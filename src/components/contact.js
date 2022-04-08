@@ -11,17 +11,21 @@ import formgroupExpert from "../image/svg/formgroup_ExpertFrame.svg";
 const people = [
   {
     id: 1,
-    name: "Hugo Schweers",
+    nameDe: "Hugo Schweers",
+    nameEn: "Hugo Schweers",
     imageUrl: hugoSchweers,
     description: "hugo.schweers@formgroup.io",
-    position: "Founder & CEO",
+    positionDe: "Founder & CEO",
+    positionEn: "Founder & CEO",
   },
   {
     id: 2,
-    name: "Für allgemeine Anfragen",
+    nameDe: "Für allgemeine Anfragen",
+    nameEn: "For general enquiries",
     imageUrl: formgroupExpert,
     description: "info@formgroup.io",
-    position: "Allgemein",
+    positionDe: "Allgemein",
+    positionEn: "General",
   },
 ];
 
@@ -106,20 +110,20 @@ const contact = (props) => {
               <div className="relative z-10 mb-4">
                 <div className="text-base max-w-prose lg:max-w-none">
                   <h2 className="inline-flex items-center px-3 py-0.5 my-4 rounded-full text-md font-medium bg-gray-200 text-fgDefault-black uppercase">
-                    FORMGROUP
+                    formgroup
                   </h2>
 
                   <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-fgDefault-black sm:text-3xl uppercase">
-                    Kontakt
+                  {props.lang === "de" ? "Kontakt" : "Contact"}
                   </p>
                 </div>
               </div>
               <div className="lg:grid lg:grid-cols-2 lg:gap-6">
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                    Gerne kontaktieren Sie mich für alle Frage rund um unser
-                    Netzwerk, unsere Plattformen und unsere Services und
-                    Lösungen. Vielen Dank
+                  {props.lang === "de" ?
+                   "Gerne kontaktieren Sie uns für alle Frage rund um unser Netzwerk, unsere Plattformen und unsere Services und Lösungen. Vielen Dank" 
+                   : "Please feel free to contact us with any questions about our network, our platforms and our services and solutions. Thank you"} 
                   </p>
                   <div>
                     <ul className="w-full divide-y divide-gray-200">
@@ -129,15 +133,15 @@ const contact = (props) => {
                             <img
                               className=" h-16 w-16 object-cover rounded-full"
                               src={item.imageUrl}
-                              alt={item.name}
+                              alt={item.nameEn}
                             />
                             <div className="flex-1 space-y-1">
                               <div className="flex items-center justify-between">
                                 <h3 className="text-md font-semibold text-fgDefault-black">
-                                  {item.name}
+                                {props.lang === "de" ? item.nameDe : item.nameEn}
                                 </h3>
                                 <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-fgDefault-black bg-opacity-50 text-white">
-                                  {item.position}
+                                  {props.lang === "de" ? item.positionDe : item.positionEn}
                                 </span>
                               </div>
                               <p className="text-sm text-fgDefault-dark">
