@@ -3,10 +3,8 @@
 import React from "react";
 
 import "./App.css";
-import Home from "./components/home";
-import Team from "./components/team";
-import Imprint from "./components/imprint";
-import Contact from "./components/contact";
+import LinkMap from "./components/linkMap";
+import AddLink from "./components/addLink";
 import { Switch, Route } from "react-router-dom";
 // import Maintenance from "./components/maintenance";
 
@@ -34,7 +32,7 @@ export default class App extends React.Component {
             exact
             path="/"
             render={(props) => (
-              <Home
+              <LinkMap
                 {...props}
                 lang={this.state.lang}
                 handleLang={this.getLang}
@@ -43,34 +41,10 @@ export default class App extends React.Component {
           />
           <Route
             exact
-            path="/team"
-            selectedTab="team"
+            path="/addLink"
+            selectedTab="addLink"
             render={(props) => (
-              <Team
-                {...props}
-                lang={this.state.lang}
-                handleLang={this.getLang}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/contact"
-            selectedTab="contact"
-            render={(props) => (
-              <Contact
-                {...props}
-                lang={this.state.lang}
-                handleLang={this.getLang}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/imprint"
-            selectedTab="imprint"
-            render={(props) => (
-              <Imprint
+              <AddLink
                 {...props}
                 lang={this.state.lang}
                 handleLang={this.getLang}

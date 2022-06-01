@@ -1,7 +1,7 @@
 
   
   
-  $primary: #070C08;
+  $primary: #90b3e2;
   
   .map-container {
     padding: 3.2rem .8rem;
@@ -30,10 +30,10 @@
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
       }
     }
-    .europe { top: 25%; left: 45%; background-image: url(../image/svg/formgroup_iconWhite.svg);background-repeat: no-repeat; background-color: #070C08;border: 1px solid #070C08; background-size: 100%; height: 4rem; width: 4rem;}
-    .romania { top: 28%; left: 52%; background-image: url(../image/svg/logo_colinsonia.svg); background-repeat: no-repeat; background-color: #fff;border: 1px solid #070C08; background-size: 100%; height: 3rem; width: 3rem; }
-    .egypt { top: 40%; left: 53%; background-image: url(../image/svg/formgroup_regionFrame.svg); background-repeat: no-repeat; background-color: #fff;border: 1px solid #070C08; background-size: 100%; height: 3rem; width: 3rem; }
-    .singapur { top: 55%; left: 76%; background-image: url(../image/svg/formgroup_regionFrame.svg); background-repeat: no-repeat; background-color: #fff;border: 1px solid #070C08; background-size: 100%; height: 3rem; width: 3rem; }
+    .sapStyle { top: 58.5%; left: 54.5%; background-image: url(../image/svg/linkSAP.svg);background-repeat: no-repeat; background-color: #fff;border: 1px solid #227dc6; background-size: 80%; height: 4rem; width: 4rem; background-attachment: fixed; background-position: center;}
+    .salesforceStyle { top: 75%; left: 23%; background-image: url(../image/svg/linkSalesforce.svg); background-repeat: no-repeat; background-color: #fff;border: 1px solid #227dc6; background-size: 80%; height: 4rem; width: 4rem; background-attachment: fixed; background-position: center;}
+    .egypt { top: 40%; left: 53%; background-image: url(../image/svg/link.svg); background-repeat: no-repeat; background-color: #fff;border: 1px solid #227dc6; background-size: 100%; height: 3rem; width: 3rem; background-attachment: fixed; background-position: center;}
+    .singapur { top: 55%; left: 76%; background-image: url(../image/svg/link.svg); background-repeat: no-repeat; background-color: #fff;border: 1px solid #227dc6; background-size: 100%; height: 3rem; width: 3rem; background-attachment: fixed; background-position: center;}
   }
   
   @keyframes pulse {

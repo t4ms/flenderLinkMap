@@ -11,10 +11,17 @@ module.exports = {
           'body': ['"Montserrat"', ],
       },
       colors:{
+        'blue':{
+          black:'#001923',
+          lighter: '#bacfef',
+          light: '#90b3e2',
+          medium: '#227dc6',
+          dark: '#003e62',         
+        },
         'fgDefault':{
           black:'#070C08',
-          lighter: '#a7d4b5',
-          light: '#6bbaa6',
+          lighter: '#bacfef',
+          light: '#90b3e2',
           medium: '#417886',
           dark: '#374151',
           darker: '#1F2937',         
